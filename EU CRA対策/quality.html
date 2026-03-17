@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>品質レポート - EU CRA対策（SEMI規格準拠企業向け戦略立案）</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Helvetica Neue', 'Noto Sans JP', sans-serif; background: #f5f7fa; color: #2d3748; line-height: 1.7; }
+  .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: #e2e8f0; padding: 24px 40px; display: flex; align-items: center; gap: 20px; }
+  .back-btn { display: inline-flex; align-items: center; gap: 6px; color: #fff; background: rgba(255,255,255,0.12); text-decoration: none; font-size: 0.85em; font-weight: 600; padding: 6px 16px; border-radius: 8px; }
+  .back-btn:hover { background: rgba(255,255,255,0.22); }
+  .header h1 { font-size: 1.3em; flex: 1; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 30px 20px; }
+  .about-box { background: #fff; border-radius: 12px; padding: 24px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #e67e22; }
+  .about-box h3 { color: #c0392b; margin-bottom: 8px; }
+  .about-box p { color: #4a5568; font-size: 0.95em; }
+  .quality-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 24px; }
+  .quality-item { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+  .quality-item img { width: 100%; height: auto; display: block; cursor: pointer; }
+  .quality-caption { padding: 16px 20px; }
+  .quality-caption h3 { font-size: 1.05em; color: #2d3748; margin-bottom: 4px; }
+  .quality-caption p { font-size: 0.88em; color: #718096; }
+  .footer { background: #1a202c; color: #a0aec0; text-align: center; padding: 24px; font-size: 0.85em; margin-top: 40px; }
+  .footer a { color: #63b3ed; text-decoration: none; }
+  .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.92); z-index: 1000; cursor: pointer; justify-content: center; align-items: center; }
+  .lightbox.active { display: flex; }
+  .lightbox img { max-width: 95%; max-height: 95%; object-fit: contain; }
+  @media (max-width: 768px) { .quality-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="header">
+  <a href="./index.html" class="back-btn">← トップに戻る</a>
+  <h1>品質レポート</h1>
+</div>
+<div class="container">
+  <div class="about-box">
+    <h3>このページについて</h3>
+    <p>本ページは調査プロセスの品質を可視化したメタデータです。調査テーマの内容ではなく、<strong>この調査自体の信頼性</strong>を確認するための情報です。各主張の確信度分布や、情報源の信頼性階層を確認することで、どの部分に追加の裏取りが必要かを判断できます。</p>
+  </div>
+  <div class="quality-grid">
+    <div class="quality-item"><img src="./quality/confidence.png" alt="確信度ヒートマップ" onclick="openLightbox(this)"><div class="quality-caption"><h3>確信度ヒートマップ</h3><p>各主張の確信度（High/Medium/Low）の分布。Lowの主張は追加の裏取りが必要です</p></div></div>
+    <div class="quality-item"><img src="./quality/sources.png" alt="ソース信頼性分布" onclick="openLightbox(this)"><div class="quality-caption"><h3>ソース信頼性分布</h3><p>情報源の信頼性階層（Tier 1〜4）の分布。Tier 3-4に依存する主張は注意が必要です</p></div></div>
+  </div>
+  <div style="margin-top: 40px;">
+    <h2 style="font-size: 1.2em; color: #2d3748; margin-bottom: 16px;">調査フロー</h2>
+    <div class="about-box" style="border-left-color: #4299e1; padding: 20px;">
+      <p style="font-size: 0.9em; color: #718096; margin-bottom: 16px;">各ステップで使用されたAIモデルと処理の流れを可視化しています</p>
+      <img src="./quality/flow.png" alt="調査フローチャート" style="max-width: 600px; width: 100%; height: auto; cursor: pointer;" onclick="openLightbox(this)">
+    </div>
+  </div>
+  <div style="margin-top: 24px;">
+    <h2 style="font-size: 1.2em; color: #2d3748; margin-bottom: 16px;">実行ログ</h2>
+    <div class="about-box" style="border-left-color: #718096; padding: 20px;">
+      <p style="font-size: 0.9em; color: #718096; margin-bottom: 12px;">調査中の全イベント（モデル呼び出し・応答・エラー等）の生ログを確認できます</p>
+      <a href="./logs/research-log.html" style="display: inline-block; background: #4a5568; color: #fff; padding: 8px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9em;">実行ログを表示 →</a>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <a href="./index.html">トップページに戻る</a> | <a href="./gallery.html">テーマギャラリー</a>
+</div>
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="">
+</div>
+<script>
+function openLightbox(el) { var lb = document.getElementById('lightbox'); document.getElementById('lightbox-img').src = el.src; lb.classList.add('active'); }
+function closeLightbox() { document.getElementById('lightbox').classList.remove('active'); }
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+</script>
+</body>
+</html>

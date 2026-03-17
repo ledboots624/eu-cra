@@ -1,0 +1,234 @@
+{
+  "step": 1,
+  "role": "information-gathering",
+  "model": "gemini-3-pro-preview",
+  "extracted_at": "2026-03-17T00:53:37Z",
+  "claims": [
+    {
+      "claim": "CRAはハードウェアおよびソフトウェアを含む「デジタル要素を備えた製品」に適用される。半導体製造装置の制御PCや組み込みOS・ファームウェアはCRAの対象（PDEs）となる。OSSは商業活動の一環として市場提供される場合は適用除外とならず、製造者が全責任を負う。",
+      "evidence": "CRA Final Text Article 2 (Scope), Recital 10",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/1183 (Cyber Resilience Act)",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+        "access_date": "unknown",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Article 2",
+          "mapping": "direct"
+        },
+        {
+          "standard": "CRA",
+          "section": "Recital 10",
+          "mapping": "direct"
+        }
+      ]
+    },
+    {
+      "claim": "製品のリスクレベルに応じてClass I（低リスク）・Class II（高リスク）・Default Categoryの3分類があり適合性評価手順が異なる。一般的な半導体製造装置はDefault Categoryに分類される可能性が高く、製造者による自己宣言（Module A）が可能となる。",
+      "evidence": "CRA Final Text Annex III (List of Important Products), Article 6 (Critical products)",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/1183 Annex III",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+        "access_date": "unknown",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Annex III",
+          "mapping": "direct"
+        },
+        {
+          "standard": "CRA",
+          "section": "Article 6",
+          "mapping": "direct"
+        }
+      ]
+    },
+    {
+      "claim": "自社の名前・商標で製品を上市する者は「製造者」として、技術文書の作成・脆弱性対応・適合宣言（DoC）署名等の包括的責任を負う。ImporterはCRA要件の充足を確認し、不適合製品を市場に出してはならないゲートキーパー義務を持つ。",
+      "evidence": "CRA Final Text Article 13 (Obligations of manufacturers), Article 16 (Importers)",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/1183 Article 13",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+        "access_date": "unknown",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Article 13",
+          "mapping": "direct"
+        },
+        {
+          "standard": "CRA",
+          "section": "Article 16",
+          "mapping": "direct"
+        }
+      ]
+    },
+    {
+      "claim": "CRAは2024年中盤に発効し、脆弱性・インシデント報告義務は発効から21ヶ月後（概ね2026年）に先行適用、CEマーキング適合を含む完全適用は発効から36ヶ月後（概ね2027年）となる。",
+      "evidence": "CRA Final Text Article 57 (Entry into force and application)",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "European Council Press Release: Cyber Resilience Act adopted",
+        "source_locator": "https://www.consilium.europa.eu/en/press/press-releases/2024/10/10/cyber-resilience-act-council-adopts-new-law-on-security-requirements-for-digital-products/",
+        "access_date": "unknown",
+        "reliability_tier": "tier1",
+        "primary_source": false,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Article 57",
+          "mapping": "direct"
+        }
+      ]
+    },
+    {
+      "claim": "CRA必須要件（Annex I）への不適合に対する最大罰則は1,500万ユーロまたは全世界売上高の2.5%のいずれか高い方。適合評価機関への虚偽情報提供等の違反は最大500万ユーロまたは売上高の1%。",
+      "evidence": "CRA Final Text Article 53 (Penalties)",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/1183 Article 53",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+        "access_date": "unknown",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Article 53",
+          "mapping": "direct"
+        },
+        {
+          "standard": "CRA",
+          "section": "Annex I",
+          "mapping": "direct"
+        }
+      ]
+    },
+    {
+      "claim": "SEMI E187のOS Support（§3.2）・Security Hardening（§3.4）・Access Control（§3.5）はCRA Annex Iの脆弱性管理・セキュアバイデフォルト・アクセス制御要件にそれぞれ直接または部分的に対応している。",
+      "evidence": "SEMI E187 Specification for Cybersecurity of Fab Equipment",
+      "source": {
+        "source_type": "industry_report",
+        "source_title": "SEMI E187-0122 Specification",
+        "source_locator": "https://store-us.semi.org/products/e18700",
+        "access_date": "unknown",
+        "reliability_tier": "tier2",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": null,
+      "standard_references": [
+        {
+          "standard": "SEMI E187",
+          "section": "§3.2",
+          "mapping": "partial"
+        },
+        {
+          "standard": "SEMI E187",
+          "section": "§3.4",
+          "mapping": "partial"
+        },
+        {
+          "standard": "SEMI E187",
+          "section": "§3.5",
+          "mapping": "partial"
+        },
+        {
+          "standard": "CRA",
+          "section": "Annex I",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "SEMI E187はSBOMフォーマットの厳密性が低くCRAが要求する機械可読形式（CycloneDX, SPDX等）および継続的更新要件を満たさない。またCRAが義務付ける24時間以内のCSIRT/ENISAへの脆弱性・インシデント早期警告プロセス（Article 11）およびCEマーキング・適合宣言（DoC）はSEMI規格にはカバーされていない。",
+      "evidence": "CRA Article 11 (Reporting obligations), Annex I",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/1183 Article 11",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+        "access_date": "unknown",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Article 11",
+          "mapping": "gap"
+        },
+        {
+          "standard": "CRA",
+          "section": "Annex I",
+          "mapping": "gap"
+        },
+        {
+          "standard": "SEMI E187",
+          "section": "SBOM",
+          "mapping": "gap"
+        }
+      ]
+    },
+    {
+      "claim": "SEMI E187準拠企業は製品設計（Secure by Design）の多くの部分でCRA要件を既に満たしている可能性が高いが、脆弱性開示・報告プロセスおよび適合宣言・技術文書に大きなギャップがあり、戦略の焦点は製品再設計ではなく運用プロセスの構築と文書化に置くべきである。",
+      "evidence": "not_stated（本文書の分析結果として著者が導出した結論であり、直接の一次ソース参照なし）",
+      "source": {
+        "source_type": "unknown",
+        "source_title": "EU CRA Regulatory Scope & SEMI Gap Analysis",
+        "source_locator": "unknown",
+        "access_date": "unknown",
+        "reliability_tier": "tier3",
+        "primary_source": false,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": "WANT",
+      "standard_references": [
+        {
+          "standard": "SEMI E187",
+          "section": "全般",
+          "mapping": "partial"
+        },
+        {
+          "standard": "CRA",
+          "section": "Annex I",
+          "mapping": "partial"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1085 @@
+{
+  "generated_at": "2026-03-17T02:22:46Z",
+  "generator": "AI Research Agent v2.5.0",
+  "total_sources": 59,
+  "tier_summary": {
+    "tier1": 45,
+    "tier2": 5,
+    "tier3": 1,
+    "tier4": 8
+  },
+  "primary_source_count": 49,
+  "sources": [
+    {
+      "id": "SRC-001",
+      "source_type": "official_document",
+      "title": "BSI TR-03183 Technical Guideline (SBOM Requirements)",
+      "locator": "https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr03183/TR-03183_node.html",
+      "url": "https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr03183/TR-03183_node.html",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "6:integration-review:claude-opus-4.6"
+      ],
+      "claim_summaries": [
+        "CRAが要求するSBOMは「一般的に使用される機械可読形式」で作成されなければならず、CycloneDX（ECMA-424）またはSPDX（ISO/IEC 5962）が事実上の標準形式。BSI TR-..."
+      ]
+    },
+    {
+      "id": "SRC-002",
+      "source_type": "official_document",
+      "title": "CEN-CENELEC Webinar – From EN IEC 62443 to CRA",
+      "locator": "https://www.cencenelec.eu/news-events/events/2025/2025-09-09-en-iec-62443-to-cra/",
+      "url": "https://www.cencenelec.eu/news-events/events/2025/2025-09-09-en-iec-62443-to-cra/",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "6:integration-review:claude-opus-4.6"
+      ],
+      "claim_summaries": [
+        "IEC 62443シリーズ（特に62443-4-1：セキュア開発ライフサイクル、62443-4-2：技術的セキュリティ要件）はCEN/CENELECにより調和規格化が進行中であり（EN IEC 624..."
+      ]
+    },
+    {
+      "id": "SRC-003",
+      "source_type": "official_document",
+      "title": "CVE CNA Rules v4.1",
+      "locator": "https://www.cve.org/Resources/Roles/Cnas/CNA_Rules_v4.1.0.pdf",
+      "url": "https://www.cve.org/Resources/Roles/Cnas/CNA_Rules_v4.1.0.pdf",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "3:technical-strategy:gpt-5.3-codex"
+      ],
+      "claim_summaries": [
+        "脆弱性件数が少ない段階では、自社CNA化よりRoot CNA連携の方が低コスト。"
+      ]
+    },
+    {
+      "id": "SRC-004",
+      "source_type": "industry_report",
+      "title": "CycloneDX BOM 1.6 schema",
+      "locator": "https://github.com/CycloneDX/specification/blob/master/schema/bom-1.6.schema.json",
+      "url": "https://github.com/CycloneDX/specification/blob/master/schema/bom-1.6.schema.json",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier2",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "3:technical-strategy:gpt-5.3-codex"
+      ],
+      "claim_summaries": [
+        "CRA最小準拠を狙うなら、法令必須に加え、監査・顧客説明で破綻しない最小フィールドセットを最初から固定すべき。"
+      ]
+    },
+    {
+      "id": "SRC-005",
+      "source_type": "industry_report",
+      "title": "Dependency-Track README（OWASP）",
+      "locator": "https://github.com/DependencyTrack/dependency-track/blob/master/README.md",
+      "url": "https://github.com/DependencyTrack/dependency-track/blob/master/README.md",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier2",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "4:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "SBOMを生成するだけでなく、CRA Annex I Part IIが要求する「継続的な脆弱性管理」を実現するには、SBOM+脆弱性DBの継続照合（Grype/OSV-Scanner）とDepende..."
+      ]
+    },
+    {
+      "id": "SRC-006",
+      "source_type": "official_document",
+      "title": "ENISA CSIRT Network",
+      "locator": "https://www.enisa.europa.eu/topics/csirts-in-europe/csirt-network",
+      "url": "https://www.enisa.europa.eu/topics/csirts-in-europe/csirt-network",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "4:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "日本の半導体装置ソフトウェア製造者がCRA対応を実施する際、技術的課題よりも「組織・言語・欧州規制体制への不慣れ」が最大の実施障壁となりうる（推測）。"
+      ]
+    },
+    {
+      "id": "SRC-007",
+      "source_type": "official_document",
+      "title": "ENISA Single Reporting Platform (SRP)",
+      "locator": "https://www.enisa.europa.eu/topics/product-security-and-certification/single-reporting-platform-srp",
+      "url": "https://www.enisa.europa.eu/topics/product-security-and-certification/single-reporting-platform-srp",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "3:technical-strategy:gpt-5.3-codex"
+      ],
+      "claim_summaries": [
+        "CRA報告運用は、ENISA SRP前提のテンプレート駆動運用にすると、日本企業でも24時間通知義務を現実的に運用可能。"
+      ]
+    },
+    {
+      "id": "SRC-008",
+      "source_type": "official_document",
+      "title": "EU CRA Article 14 (Reporting Obligations)",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "6:integration-review:claude-opus-4.6"
+      ],
+      "claim_summaries": [
+        "2026年9月11日から、製造者は「積極的に悪用されている脆弱性（actively exploited vulnerability）」を認知してから24時間以内にENISA SRPへ早期警告を提出し、..."
+      ]
+    },
+    {
+      "id": "SRC-009",
+      "source_type": "official_document",
+      "title": "EU CRA Article 18 (Authorised Representatives)",
+      "locator": "https://cyber-resilience-act.com/cra/chapter-2/article-18/",
+      "url": "https://cyber-resilience-act.com/cra/chapter-2/article-18/",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "6:integration-review:claude-opus-4.6"
+      ],
+      "claim_summaries": [
+        "CRA Article 18により、EU域内に法的拠点を持たない日本の製造者がEU市場にデジタル要素を含む製品を出荷する場合、書面による委任状に基づきEU域内にAuthorised Represent..."
+      ]
+    },
+    {
+      "id": "SRC-010",
+      "source_type": "official_document",
+      "title": "EU CRA Article 64 (Penalties)",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "6:integration-review:claude-opus-4.6"
+      ],
+      "claim_summaries": [
+        "CRA違反の罰則は3段階構造で、①必須セキュリティ要件（Annex I）違反：最大1500万ユーロまたは全世界売上高の2.5%のいずれか高い方、②その他の義務違反：最大1000万ユーロまたは売上高の2..."
+      ]
+    },
+    {
+      "id": "SRC-011",
+      "source_type": "unknown",
+      "title": "EU CRA Regulatory Scope & SEMI Gap Analysis",
+      "locator": "unknown",
+      "url": null,
+      "access_date": "unknown",
+      "reliability_tier": "tier3",
+      "primary_source": false,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "1:information-gathering:gemini-3-pro-preview"
+      ],
+      "claim_summaries": [
+        "SEMI E187準拠企業は製品設計（Secure by Design）の多くの部分でCRA要件を既に満たしている可能性が高いが、脆弱性開示・報告プロセスおよび適合宣言・技術文書に大きなギャップがあり..."
+      ]
+    },
+    {
+      "id": "SRC-012",
+      "source_type": "official_document",
+      "title": "European Commission CRA reporting page",
+      "locator": "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 2,
+      "referenced_by": [
+        "3:technical-strategy:gpt-5.3-codex"
+      ],
+      "claim_summaries": [
+        "「報告運用先行→SBOM自動化→設計改修」の順が、罰則回避と現場負荷のバランスが最も良い。",
+        "日本企業での実装は、英日テンプレート＋PSIRT当番＋自動証跡収集の3点セットで運用負荷を最小化できる。"
+      ]
+    },
+    {
+      "id": "SRC-013",
+      "source_type": "official_document",
+      "title": "European Council Press Release: Cyber Resilience Act adopted",
+      "locator": "https://www.consilium.europa.eu/en/press/press-releases/2024/10/10/cyber-resilience-act-council-adopts-new-law-on-security-requirements-for-digital-products/",
+      "url": "https://www.consilium.europa.eu/en/press/press-releases/2024/10/10/cyber-resilience-act-council-adopts-new-law-on-security-requirements-for-digital-products/",
+      "access_date": "unknown",
+      "reliability_tier": "tier1",
+      "primary_source": false,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "1:information-gathering:gemini-3-pro-preview"
+      ],
+      "claim_summaries": [
+        "CRAは2024年中盤に発効し、脆弱性・インシデント報告義務は発効から21ヶ月後（概ね2026年）に先行適用、CEマーキング適合を含む完全適用は発効から36ヶ月後（概ね2027年）となる。"
+      ]
+    },
+    {
+      "id": "SRC-014",
+      "source_type": "industry_report",
+      "title": "FIRST PSIRT Services Framework v1.1",
+      "locator": "https://www.first.org/standards/frameworks/psirts/FIRST_PSIRT_Services_Framework_v1.1.pdf",
+      "url": "https://www.first.org/standards/frameworks/psirts/FIRST_PSIRT_Services_Framework_v1.1.pdf",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier2",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "4:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "CRA対応を横断的に推進する「CRA対応オーナー（PSIRT兼任可）」を任命し、責任主体・意思決定経路・外部連携（EU法務顧問・認定機関）を明確化することが、フェーズ全体の実行速度を決定する。"
+      ]
+    },
+    {
+      "id": "SRC-015",
+      "source_type": "official_document",
+      "title": "IEC 62443 Series（産業用セキュリティ標準）",
+      "locator": "https://webstore.iec.ch/en/publication/33615",
+      "url": "https://webstore.iec.ch/en/publication/33615",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "4:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "IEC 62443（産業用オートメーション・制御システムのセキュリティ）は、CRA Annex I要件と最も重複度が高い関連規格であり、特にIEC 62443-4-1（製品セキュリティ開発ライフサイク..."
+      ]
+    },
+    {
+      "id": "SRC-016",
+      "source_type": "official_document",
+      "title": "ISO/IEC 27001:2022（情報セキュリティマネジメント要件）",
+      "locator": "https://www.iso.org/standard/27001",
+      "url": "https://www.iso.org/standard/27001",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "4:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "ISO/IEC 27001（情報セキュリティマネジメントシステム）は、CRAの脆弱性管理プロセス・インシデント対応・サプライチェーン管理要件と組織的側面で重複しており、既存ISO 27001認証保有企..."
+      ]
+    },
+    {
+      "id": "SRC-017",
+      "source_type": "official_document",
+      "title": "Implementing Regulation (EU) 2025/2392 (Technical Descriptions)",
+      "locator": "https://eur-lex.europa.eu/eli/reg_impl/2025/2392/oj/eng",
+      "url": "https://eur-lex.europa.eu/eli/reg_impl/2025/2392/oj/eng",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "6:integration-review:claude-opus-4.6"
+      ],
+      "claim_summaries": [
+        "CRA Annex IIIおよび実施規則(EU) 2025/2392の技術定義に基づき、半導体製造装置に組み込まれる制御ソフトウェアはIACS（産業用オートメーション・制御システム）カテゴリとしてCl..."
+      ]
+    },
+    {
+      "id": "SRC-018",
+      "source_type": "official_document",
+      "title": "METI Cybersecurity Policy",
+      "locator": "https://www.meti.go.jp/english/policy/safety_security/cybersecurity/index.html",
+      "url": "https://www.meti.go.jp/english/policy/safety_security/cybersecurity/index.html",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "6:integration-review:claude-opus-4.6"
+      ],
+      "claim_summaries": [
+        "2026年3月時点で、日本の半導体装置関連企業によるCRA完全準拠の公開事例は確認されていない。経産省（METI）がOTセキュリティガイドライン（半導体工場等向け）を2025年に公表、IoTセキュリテ..."
+      ]
+    },
+    {
+      "id": "SRC-019",
+      "source_type": "official_document",
+      "title": "NIST SP 800-218 Secure Software Development Framework（SSDF）v1.1",
+      "locator": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218.pdf",
+      "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218.pdf",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "4:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "NIST SP 800-218（Secure Software Development Framework：SSDF）は、CRAが求めるセキュア開発ライフサイクルの実装指針として最も直接的に参照可能な..."
+      ]
+    },
+    {
+      "id": "SRC-020",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/1183 (Cyber Resilience Act)",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "access_date": "unknown",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "1:information-gathering:gemini-3-pro-preview"
+      ],
+      "claim_summaries": [
+        "CRAはハードウェアおよびソフトウェアを含む「デジタル要素を備えた製品」に適用される。半導体製造装置の制御PCや組み込みOS・ファームウェアはCRAの対象（PDEs）となる。OSSは商業活動の一環とし..."
+      ]
+    },
+    {
+      "id": "SRC-021",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/1183 Annex I Part I §8",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "access_date": "2024-10",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "2:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "CRA Annex I Part I §8は「ユーザーが関連するセキュリティイベントのログを記録・モニタリングできる機能」を要求するが、SEMI E187 §3.4のアカウントログ要件より広範であり、..."
+      ]
+    },
+    {
+      "id": "SRC-022",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/1183 Annex I Part I §9",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "access_date": "2024-10",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "2:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "CRA Annex I §9は「個人データ・コンテンツ・機能の処理を技術的に必要な最小限に限定する」設計を要求する。半導体装置のソフトウェアが診断テレメトリやオペレーター識別情報を収集する場合、この要..."
+      ]
+    },
+    {
+      "id": "SRC-023",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/1183 Annex I Part II §1",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "access_date": "2024-10",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "2:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "CRAは製品の「サポート期間（support period）」として「製品の予想ライフサイクル」または最低5年のいずれか長い方の間、セキュリティアップデートを無償で提供する義務を課している。SEMI ..."
+      ]
+    },
+    {
+      "id": "SRC-024",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/1183 Annex I Part II, Recital 58",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "access_date": "2024-10",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "2:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "CRAは機械可読SBOM（Software Bill of Materials）の作成と最新状態の維持を義務付けており、SEMI E188の「Software Inventory」がその前身として活用..."
+      ]
+    },
+    {
+      "id": "SRC-025",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/1183 Annex I, Annex V",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "access_date": "2024-10",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "2:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "以下のSEMI準拠資産はCRA要件を直接または大幅な修正なしに充足できる「高価値再利用資産」であり、対応工数を大幅に削減できる。具体的には、E187 §3.3 不要ポート/サービス無効化記録（→Ann..."
+      ]
+    },
+    {
+      "id": "SRC-026",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/1183 Annex I, Part II",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "access_date": "2024-10",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "2:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "CRA Annex I Part II は製品の市場投入後（post-market）の継続的脆弱性管理を義務付けており、製品の「予想サポート期間」または最低5年間の対応を要求する。これはSEMI規格が..."
+      ]
+    },
+    {
+      "id": "SRC-027",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/1183 Annex I, Part I",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "access_date": "2024-10",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "2:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "CRA Annex I Part I は製品のライフサイクル全体にわたる13項目のセキュリティ要件を規定しており、「設計・開発・製造」段階における技術的義務を構成する。これらはすべてMUST要件であり..."
+      ]
+    },
+    {
+      "id": "SRC-028",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/1183 Annex III",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "access_date": "unknown",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "1:information-gathering:gemini-3-pro-preview"
+      ],
+      "claim_summaries": [
+        "製品のリスクレベルに応じてClass I（低リスク）・Class II（高リスク）・Default Categoryの3分類があり適合性評価手順が異なる。一般的な半導体製造装置はDefault Cat..."
+      ]
+    },
+    {
+      "id": "SRC-029",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/1183 Article 11",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "access_date": "unknown",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 2,
+      "referenced_by": [
+        "1:information-gathering:gemini-3-pro-preview",
+        "2:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "CRA Article 11は、「悪用された脆弱性（actively exploited vulnerability）」および「深刻なインシデント（severe incident）」に対して段階的報告...",
+        "SEMI E187はSBOMフォーマットの厳密性が低くCRAが要求する機械可読形式（CycloneDX, SPDX等）および継続的更新要件を満たさない。またCRAが義務付ける24時間以内のCSIRT/..."
+      ]
+    },
+    {
+      "id": "SRC-030",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/1183 Article 13.6",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "access_date": "2024-10",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "2:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "CRA Article 13.6は、製造者が「脆弱性の報告を受け付けるための連絡先（contact point）を公開」し、「CVD（Coordinated Vulnerability Disclos..."
+      ]
+    },
+    {
+      "id": "SRC-031",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/1183 Article 13",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "access_date": "unknown",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "1:information-gathering:gemini-3-pro-preview"
+      ],
+      "claim_summaries": [
+        "自社の名前・商標で製品を上市する者は「製造者」として、技術文書の作成・脆弱性対応・適合宣言（DoC）署名等の包括的責任を負う。ImporterはCRA要件の充足を確認し、不適合製品を市場に出してはなら..."
+      ]
+    },
+    {
+      "id": "SRC-032",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/1183 Article 53",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "access_date": "unknown",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "1:information-gathering:gemini-3-pro-preview"
+      ],
+      "claim_summaries": [
+        "CRA必須要件（Annex I）への不適合に対する最大罰則は1,500万ユーロまたは全世界売上高の2.5%のいずれか高い方。適合評価機関への虚偽情報提供等の違反は最大500万ユーロまたは売上高の1%。"
+      ]
+    },
+    {
+      "id": "SRC-033",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/1183 Articles 20-22, Annex IV, Annex V",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+      "access_date": "2024-10",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "2:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "CRA Article 20およびArticle 22は、Annex IVに規定される様式に従ったDoC（Declaration of Conformity）の作成と、製品へのCEマーキング貼付を製造..."
+      ]
+    },
+    {
+      "id": "SRC-034",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/2847 (CRA Full Text)",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 3,
+      "referenced_by": [
+        "6:integration-review:claude-opus-4.6"
+      ],
+      "claim_summaries": [
+        "CRA Annex I Part IおよびPart IIの必須要件とSEMI E187/E188の対応関係において、脆弱性報告（ENISA）・適合宣言（DoC）・ユーザーへの情報提供の3領域はSEMI...",
+        "CRAは3段階で施行される。2024年12月10日発効、2026年9月11日に脆弱性報告義務の適用開始、2027年12月11日に全面施行（適合性評価・CEマーキング・技術文書の全要件適用）。2026年...",
+        "日本から欧州への半導体装置ソフトウェア販売には複数の商流パターン（①EU子会社経由、②商社経由、③現地ディストリビューター経由、④OEM組込み）が存在し、各パターンでCRA上の責任主体（Manufac..."
+      ]
+    },
+    {
+      "id": "SRC-035",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/2847 Annex I Part I §8, §9",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "4:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "CRA要件のうちSEMI資産で充足できない「ギャップ項目」（セキュリティイベントログの拡充・データ最小化設計・インシデント封じ込め機能・暗号化通信の完全化）については、製品ロードマップへの組み込みによ..."
+      ]
+    },
+    {
+      "id": "SRC-036",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/2847 Annex I Part II",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "4:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "CRAが要求する「機械可読SBOM（commonly used and machine-readable format）」の最小コスト実装は、Syftによる自動生成をCIパイプラインに組み込み、Cyc..."
+      ]
+    },
+    {
+      "id": "SRC-037",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/2847 Annex III",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "4:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "CRA適用開始前に製品がDefault Category・Class I・Class IIのいずれに該当するかを確定することが最重要の初期アクションであり、この判定が第三者認証要否（数百万円の費用差）..."
+      ]
+    },
+    {
+      "id": "SRC-038",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/2847 Annex III（製品分類）",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "4:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "中小企業においては、EU法務顧問（DoC発行・製品分類確認）と認定コンサルタント（技術文書レビュー）への限定的な外部委託が、全内製よりも総コストを削減できる可能性が高い。自社には「プロセスオーナー」を..."
+      ]
+    },
+    {
+      "id": "SRC-039",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/2847 Annex V（技術文書要件）",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "4:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "CRA Annex V（技術文書）の要求事項に対し、既存のSEMI E187/E188準拠文書を再利用・変換することで、技術文書整備の約60〜70%を既存資産でカバーできる。この変換作業に集中投資する..."
+      ]
+    },
+    {
+      "id": "SRC-040",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/2847 Article 13(6)",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "4:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "Article 13(6)が要求する脆弱性報告受付窓口の公開は、security.txt（RFC 9116準拠）+ 専用メールアドレス + 公開VDPページの3点セットで最短実装できる。これは工数最小..."
+      ]
+    },
+    {
+      "id": "SRC-041",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/2847 Article 14",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "4:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "Article 14に基づく24時間早期警告・72時間通知・最終報告の3段階プロセスを、ENISAのSingle Reporting Platform（SRP）経由で実行できる運用手順書・テンプレート..."
+      ]
+    },
+    {
+      "id": "SRC-042",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/2847 Article 20, Annex IV, Annex VIII（適合評価手順）",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "4:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "Default Category製品（Module A：自己宣言）の場合、DoC作成は第三者認証なしに実施可能であり、Annex IV規定フォームへの記載と法務確認を経て発行できる。DoC発行コストの..."
+      ]
+    },
+    {
+      "id": "SRC-043",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/2847 Article 71",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "4:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "2026年9月（報告義務先行施行）を唯一の硬直的期限として扱い、Phase 1（報告義務対応）とPhase 2の一部（SBOM初期生成）を2026年9月までの必達目標として集中投資する。残りのPhas..."
+      ]
+    },
+    {
+      "id": "SRC-044",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/2847 Article 71（発効・施行規定）",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "4:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "CRA（Regulation (EU) 2024/2847）は2024年12月11日に発効し、段階的施行スケジュールが法令により確定している。ロードマップ設計において最も重要な制約は「インシデント報告..."
+      ]
+    },
+    {
+      "id": "SRC-045",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/2847 Recital 35, Article 19（調和規格）",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "4:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "IEC 62443は現時点ではCRAの「調和規格（Harmonised Standards）」として正式指定されていないが、CRA Recital 35は「既存のセキュリティ規格・標準が技術文書の根拠..."
+      ]
+    },
+    {
+      "id": "SRC-046",
+      "source_type": "official_document",
+      "title": "Regulation (EU) 2024/2847",
+      "locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 5,
+      "referenced_by": [
+        "3:technical-strategy:gpt-5.3-codex"
+      ],
+      "claim_summaries": [
+        "CRA対応の最小コスト化は、SEMI E188の既存Software Inventoryを機械可読SBOMへ変換し、報告ワークフロー（24h/72h）を先行実装する方針が最も実装効率が高い。",
+        "SBOM要素の実装細目や報告手順の一部は、実施法・ガイダンス更新で変動余地があるため、四半期ごとに法令ウォッチを組み込むのが安全。",
+        "本件の最適解は「CRA必須のMUSTを先に閉じる」戦略。具体的にはSBOM機械可読化と24h/72h報告運用を最優先し、製品設計はSEMI資産を再利用して差分実装する。",
+        "製品設計は「新規再設計」よりも、CRA Annex I要求をSEMI既存制御へマッピングし不足分だけ実装する方式が低コスト。",
+        "連絡窓口公開は security.txt + 専用メール + 公開VDP の3点で最短実装できる。"
+      ]
+    },
+    {
+      "id": "SRC-047",
+      "source_type": "industry_report",
+      "title": "SEMI E187-0122 Specification for Cybersecurity of Fab Equipment",
+      "locator": "https://store-us.semi.org/products/e18700",
+      "url": "https://store-us.semi.org/products/e18700",
+      "access_date": "2022",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "2:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "SEMI E187-0122（2022年版）は、半導体ファブ設備のサイバーセキュリティを対象に、OS管理・セキュリティ設定・アクセス制御・通信セキュリティ・セキュリティパッチ管理の5領域を規定している..."
+      ]
+    },
+    {
+      "id": "SRC-048",
+      "source_type": "industry_report",
+      "title": "SEMI E187-0122 Specification",
+      "locator": "https://store-us.semi.org/products/e18700",
+      "url": "https://store-us.semi.org/products/e18700",
+      "access_date": "unknown",
+      "reliability_tier": "tier2",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "1:information-gathering:gemini-3-pro-preview"
+      ],
+      "claim_summaries": [
+        "SEMI E187のOS Support（§3.2）・Security Hardening（§3.4）・Access Control（§3.5）はCRA Annex Iの脆弱性管理・セキュアバイデフォ..."
+      ]
+    },
+    {
+      "id": "SRC-049",
+      "source_type": "official_document",
+      "title": "SEMI E187-0817 Specification for Cybersecurity of Fab Equipment",
+      "locator": "https://www.semi.org/en/products-services/standards/e187",
+      "url": "https://www.semi.org/en/products-services/standards/e187",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "6:integration-review:claude-opus-4.6"
+      ],
+      "claim_summaries": [
+        "SEMI E187（Fab装置サイバーセキュリティ仕様）とE188（マルウェアフリー統合仕様）は、CRA Annex I Part Iの必須セキュリティ要件の一部をカバーするが、適用対象・ライフサイク..."
+      ]
+    },
+    {
+      "id": "SRC-050",
+      "source_type": "industry_report",
+      "title": "SEMI E188-0120 Specification for Malware Free Equipment Integration",
+      "locator": "https://store-us.semi.org/products/e18800",
+      "url": "https://store-us.semi.org/products/e18800",
+      "access_date": "2020",
+      "reliability_tier": "tier1",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "2:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "SEMI E188-0120（2020年版）は、ファブへの設備搬入時のマルウェアフリー状態保証に特化しており、サプライチェーンセキュリティ（製造・出荷・設置段階）を対象とする。CRA Annex I ..."
+      ]
+    },
+    {
+      "id": "SRC-051",
+      "source_type": "unknown",
+      "title": "コスト推計（著者推論・前ステップ統合）",
+      "locator": "not_stated",
+      "url": null,
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier4",
+      "primary_source": false,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "6:integration-review:claude-opus-4.6"
+      ],
+      "claim_summaries": [
+        "コスト試算は単一の楽観シナリオではなく3シナリオで提示すべき。楽観シナリオ（Default Category、SEMI実装良好、ISO 27001保有、単一製品）では5年間総費用2,000〜4,500..."
+      ]
+    },
+    {
+      "id": "SRC-052",
+      "source_type": "unknown",
+      "title": "前ステップ deep-analysis（本調査セッション内分析）",
+      "locator": "unknown",
+      "url": null,
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier4",
+      "primary_source": false,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "4:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "本ロードマップは「法的リスクの時系列的除去」を最優先原則とし、①先行施行される報告義務への対応を最初の完了目標とし、②既存SEMI資産の再利用を最大化することで新規投資を最小化し、③フェーズ間の依存関..."
+      ]
+    },
+    {
+      "id": "SRC-053",
+      "source_type": "unknown",
+      "title": "前ステップ分析・著者推論",
+      "locator": "unknown",
+      "url": null,
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier4",
+      "primary_source": false,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "4:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "SEMI E187/E188遵守企業のCRA対応コストの70〜80%は製品の技術的再設計ではなく、プロセス構築と文書整備に集中するべきであり、これが中小企業にとって最もROIが高い投資方針である。"
+      ]
+    },
+    {
+      "id": "SRC-054",
+      "source_type": "industry_report",
+      "title": "各OSSツールGitHub README参照（前ステップ技術戦略分析）",
+      "locator": "https://github.com/anchore/syft",
+      "url": "https://github.com/anchore/syft",
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier2",
+      "primary_source": true,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "4:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "SBOM生成・管理・脆弱性照合のツールスタックはすべてOSSで構成可能であり、ライセンスコストゼロで必要な技術基盤を構築できる。商用ツールへの投資はOSS基盤が安定してから段階的に検討するべきである。"
+      ]
+    },
+    {
+      "id": "SRC-055",
+      "source_type": "unknown",
+      "title": "著者のマッピング分析",
+      "locator": "not_stated",
+      "url": null,
+      "access_date": "unknown",
+      "reliability_tier": "tier4",
+      "primary_source": false,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "2:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "SEMI E187/E188準拠企業は、CRA Annex I Part I（製品設計要件）において約60〜70%の要件を既存資産で充足できると推定される。一方、Annex I Part II（脆弱性..."
+      ]
+    },
+    {
+      "id": "SRC-056",
+      "source_type": "unknown",
+      "title": "著者の工数変動分析（参考値）",
+      "locator": "unknown",
+      "url": null,
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier4",
+      "primary_source": false,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "4:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "本ロードマップの「18ヶ月・213〜390人日」という推計は、SEMI準拠済み・中堅規模（50〜200名）・既存セキュリティ担当者保有を前提とした参考値であり、実際の難易度は製品分類・既存認証保有状況..."
+      ]
+    },
+    {
+      "id": "SRC-057",
+      "source_type": "unknown",
+      "title": "著者の文書管理最適化推論",
+      "locator": "unknown",
+      "url": null,
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier4",
+      "primary_source": false,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "4:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "技術文書（Annex V）の初版は最小限の必須記載事項のみで作成し、四半期ごとに更新・充実化する「生きた文書」として管理することで、初期構築コストと継続維持コストの両方を最適化できる。"
+      ]
+    },
+    {
+      "id": "SRC-058",
+      "source_type": "unknown",
+      "title": "著者の規格活用分析に基づく推論",
+      "locator": "unknown",
+      "url": null,
+      "access_date": "2026-03-17",
+      "reliability_tier": "tier4",
+      "primary_source": false,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "4:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "ISO 27001を未取得の場合でも、ISO 27001の統制フレームワーク（Annex A統制リスト）をCRA対応のチェックリスト設計の参照モデルとして活用することで、ゼロベース設計より効率的な組織..."
+      ]
+    },
+    {
+      "id": "SRC-059",
+      "source_type": "unknown",
+      "title": "著者の規格間比較分析",
+      "locator": "not_stated",
+      "url": null,
+      "access_date": "unknown",
+      "reliability_tier": "tier4",
+      "primary_source": false,
+      "community_score": null,
+      "reference_count": 1,
+      "referenced_by": [
+        "2:deep-analysis:claude-sonnet-4.6"
+      ],
+      "claim_summaries": [
+        "以下の資産は既存のSEMI準拠文書を拡張することでCRA要件を充足できるが、一定の新規作業が必要である。これらへの投資は既存文書の改訂として位置づけられるため、ゼロベース構築より50〜70%のコスト削..."
+      ]
+    }
+  ]
+}

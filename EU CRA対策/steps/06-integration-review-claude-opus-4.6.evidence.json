@@ -1,0 +1,340 @@
+{
+  "step": 6,
+  "role": "integration-review",
+  "model": "claude-opus-4.6",
+  "extracted_at": "2026-03-17T01:45:28Z",
+  "claims": [
+    {
+      "claim": "CRAは3段階で施行される。2024年12月10日発効、2026年9月11日に脆弱性報告義務の適用開始、2027年12月11日に全面施行（適合性評価・CEマーキング・技術文書の全要件適用）。2026年6月11日からはNotified Bodyの指定通知が開始される。",
+      "evidence": "Regulation (EU) 2024/2847の条文および欧州委員会公式タイムラインにより確認。脆弱性報告義務は既にEU市場にある製品も対象（レガシー製品含む）。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/2847 (CRA Full Text)",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "EU CRA",
+          "section": "Article 71",
+          "mapping": "direct"
+        }
+      ]
+    },
+    {
+      "claim": "CRA Annex IIIおよび実施規則(EU) 2025/2392の技術定義に基づき、半導体製造装置に組み込まれる制御ソフトウェアはIACS（産業用オートメーション・制御システム）カテゴリとしてClass I（重要製品）に分類される可能性が高い。Default Categoryではなく、Class Iの場合は調和規格が利用可能な場合の自己適合宣言、もしくはEN規格がない場合の第三者評価が必要となる。NIS2指令の「essential entities」向けに使用される場合はClass IIに昇格するリスクもある。",
+      "evidence": "実施規則(EU) 2025/2392（2025年12月1日公布・12月21日施行）がAnnex IIIの技術的定義を確定。IACSソフトウェアが明示的にClass Iに列挙されている。半導体製造装置の制御ソフトウェアはPLC/DCS/SCADA等と同等の機能を持つため、「core functionality」原則によりIACSカテゴリに該当する蓋然性が高い。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Implementing Regulation (EU) 2025/2392 (Technical Descriptions)",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg_impl/2025/2392/oj/eng",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "EU CRA",
+          "section": "Annex III Part I",
+          "mapping": "direct"
+        },
+        {
+          "standard": "Implementing Regulation (EU) 2025/2392",
+          "section": "Annex I",
+          "mapping": "direct"
+        }
+      ]
+    },
+    {
+      "claim": "CRA Article 18により、EU域内に法的拠点を持たない日本の製造者がEU市場にデジタル要素を含む製品を出荷する場合、書面による委任状に基づきEU域内にAuthorised Representative（AR）を設置する義務がある。ARはDoC・技術文書の10年間保管、市場監視当局への協力を担う。ただし、製品設計・脆弱性対応等の製造者義務そのものはARに移転されず日本本社に残る。",
+      "evidence": "Article 18の条文は明確にEU域外製造者のAR設置を規定。EU製品安全法制の一般原則として、非EU製造者の法的アクセスポイント確保は標準要件。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "EU CRA Article 18 (Authorised Representatives)",
+        "source_locator": "https://cyber-resilience-act.com/cra/chapter-2/article-18/",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "EU CRA",
+          "section": "Article 18",
+          "mapping": "direct"
+        }
+      ]
+    },
+    {
+      "claim": "日本から欧州への半導体装置ソフトウェア販売には複数の商流パターン（①EU子会社経由、②商社経由、③現地ディストリビューター経由、④OEM組込み）が存在し、各パターンでCRA上の責任主体（Manufacturer / Authorised Representative / Importer / Distributor）が根本的に異なる。前ステップ分析は「直接輸出・製造者責任」のみを前提としており、商社・OEM経由の分析が完全に欠落していた。責任の分断（設計責任は製造者に残り、文書保管・当局対応はImporterが負う等）が実務上最大の混乱要因となる。",
+      "evidence": "CRA Article 13（製造者義務）、Article 16（輸入者義務）、Article 17（販売者義務）、Article 18（AR）、Recital 47（サプライチェーン義務）により責任主体が明確に区分されている。日本の半導体装置関連企業の欧州展開は商社・代理店経由が主流であるという業界実態がある。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/2847 (CRA Full Text)",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "EU CRA",
+          "section": "Article 13",
+          "mapping": "direct"
+        },
+        {
+          "standard": "EU CRA",
+          "section": "Article 16",
+          "mapping": "direct"
+        },
+        {
+          "standard": "EU CRA",
+          "section": "Article 17",
+          "mapping": "direct"
+        },
+        {
+          "standard": "EU CRA",
+          "section": "Article 18",
+          "mapping": "direct"
+        },
+        {
+          "standard": "EU CRA",
+          "section": "Recital 47",
+          "mapping": "direct"
+        }
+      ]
+    },
+    {
+      "claim": "SEMI E187（Fab装置サイバーセキュリティ仕様）とE188（マルウェアフリー統合仕様）は、CRA Annex I Part Iの必須セキュリティ要件の一部をカバーするが、適用対象・ライフサイクル範囲・義務レベルの体系が根本的に異なるため、条項レベルの精密マッピングなしに「60〜70%再利用可能」とする推計は検証不能である。",
+      "evidence": "SEMI E187はOSセキュリティ・ネットワークセキュリティ・エンドポイント保護・セキュリティ監視の4領域でCRAの「セキュアバイデザイン」要件と部分的に重複する。一方、CRAの脆弱性管理（5年間サポート・インシデント報告）、SBOM（機械可読形式・ハッシュ値）、適合宣言（DoC・CEマーキング）には対応する条項がSEMI規格に存在しない。SEMI準拠が「書面対応」に留まり実装を伴わないケースが業界で散見される点もリスク要因。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "SEMI E187-0817 Specification for Cybersecurity of Fab Equipment",
+        "source_locator": "https://www.semi.org/en/products-services/standards/e187",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": null,
+      "standard_references": [
+        {
+          "standard": "SEMI E187",
+          "section": "—",
+          "mapping": "partial"
+        },
+        {
+          "standard": "SEMI E188",
+          "section": "—",
+          "mapping": "partial"
+        },
+        {
+          "standard": "EU CRA",
+          "section": "Annex I Part I",
+          "mapping": "partial"
+        },
+        {
+          "standard": "EU CRA",
+          "section": "Article 14",
+          "mapping": "gap"
+        },
+        {
+          "standard": "EU CRA",
+          "section": "Annex VII",
+          "mapping": "gap"
+        }
+      ]
+    },
+    {
+      "claim": "CRA Annex I Part IおよびPart IIの必須要件とSEMI E187/E188の対応関係において、脆弱性報告（ENISA）・適合宣言（DoC）・ユーザーへの情報提供の3領域はSEMI規格に対応条項が存在せず新規構築が必要であり、リスクアセスメント・セキュアバイデザイン・SBOM・脆弱性管理・技術文書・セキュリティアップデートの領域はpartial対応であり追加対応が必要である。「再利用可能」はSEMI準拠が実装レベルで達成されていることが前提条件。",
+      "evidence": "CRA条文およびSEMI規格文書の構造比較に基づく。CRA Annex I Part IおよびPart IIの各要件領域とSEMI E187/E188の条項を対照分析した結果として、個別対応度を「partial」「gap」で分類。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/2847 (CRA Full Text)",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": null,
+      "standard_references": [
+        {
+          "standard": "EU CRA",
+          "section": "Annex I Part I",
+          "mapping": "partial"
+        },
+        {
+          "standard": "EU CRA",
+          "section": "Annex I Part II",
+          "mapping": "partial"
+        },
+        {
+          "standard": "SEMI E187",
+          "section": "—",
+          "mapping": "partial"
+        },
+        {
+          "standard": "SEMI E188",
+          "section": "—",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "IEC 62443シリーズ（特に62443-4-1：セキュア開発ライフサイクル、62443-4-2：技術的セキュリティ要件）はCEN/CENELECにより調和規格化が進行中であり（EN IEC 62443-4-1:2018/A11:2026、EN IEC 62443-4-2:2019/A11:2026として修正作業中）、2026年中の発行が目標とされている。正式にEU官報に掲載された場合、「準拠推定（Presumption of Conformity）」が発生し適合性評価が大幅に簡素化される。2026年3月時点ではまだ正式指定されていないため、「コスト削減効果30〜50%」は楽観的な前提であり確定値として使うべきではないが、IEC 62443に今から着手することは投資対効果が最も高い準備行動である。",
+      "evidence": "CEN-CENELECのWebinar（2025年9月）で62443シリーズのCRA調和規格化ロードマップが公表。CENELEC TC65X WG3が修正作業を主導。ただし正式な調和規格指定（EU官報掲載）は2026年3月時点で未完了。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "CEN-CENELEC Webinar – From EN IEC 62443 to CRA",
+        "source_locator": "https://www.cencenelec.eu/news-events/events/2025/2025-09-09-en-iec-62443-to-cra/",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": "SHOULD",
+      "standard_references": [
+        {
+          "standard": "IEC 62443-4-1",
+          "section": "—",
+          "mapping": "partial"
+        },
+        {
+          "standard": "IEC 62443-4-2",
+          "section": "—",
+          "mapping": "partial"
+        },
+        {
+          "standard": "EU CRA",
+          "section": "Annex I Part II",
+          "mapping": "partial"
+        },
+        {
+          "standard": "EU CRA",
+          "section": "Annex I Part I",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "CRAが要求するSBOMは「一般的に使用される機械可読形式」で作成されなければならず、CycloneDX（ECMA-424）またはSPDX（ISO/IEC 5962）が事実上の標準形式。BSI TR-03183-2が詳細なフィールドマッピングを提供しており、必須フィールドにはサプライヤー名、コンポーネント名・バージョン、依存関係、著者、タイムスタンプ、暗号ハッシュ（SHA-256等）が含まれる。SBOM全面準拠期限は2027年12月11日。SEMI E188のソフトウェアインベントリは出発点として活用できるが、形式・深度・自動化の面で大幅な拡張が必要。",
+      "evidence": "CRA条文、BSI TR-03183-2、OpenSSFのCRA分析レポートにより確認。トップレベル依存関係は義務的、推移的依存関係（transitive）は強く推奨。CI/CDパイプラインでの自動生成が事実上必須（手動SBOMは運用不能）。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "BSI TR-03183 Technical Guideline (SBOM Requirements)",
+        "source_locator": "https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr03183/TR-03183_node.html",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "EU CRA",
+          "section": "Annex I Part II §1",
+          "mapping": "direct"
+        },
+        {
+          "standard": "BSI TR-03183-2",
+          "section": "—",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "2026年9月11日から、製造者は「積極的に悪用されている脆弱性（actively exploited vulnerability）」を認知してから24時間以内にENISA SRPへ早期警告を提出し、72時間以内に詳細通知、14日以内に最終報告を行う義務がある。日本企業にとっての固有課題は、(a) タイムゾーン差（JST+9による夜間対応リスク）、(b) 英語での報告作成能力、(c) 24/7オンコール体制の構築コスト、(d) 「actively exploited」の判定基準の不明確さ、(e) ENISA SRPの運用開始状況の不確実性の5点。",
+      "evidence": "CRA Article 14が報告義務を明確に規定。ENISAはSRPを2026年9月の義務開始に向けて開発中だが、2026年3月時点ではパイロット段階。SRP未稼働時の代替経路（国別CSIRT直接報告）の準備が必要。罰則は最大1500万ユーロまたは全世界売上高の2.5%。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "EU CRA Article 14 (Reporting Obligations)",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "EU CRA",
+          "section": "Article 14",
+          "mapping": "direct"
+        }
+      ]
+    },
+    {
+      "claim": "CRA違反の罰則は3段階構造で、①必須セキュリティ要件（Annex I）違反：最大1500万ユーロまたは全世界売上高の2.5%のいずれか高い方、②その他の義務違反：最大1000万ユーロまたは売上高の2%、③市場監視当局への虚偽・不完全情報提供：最大500万ユーロまたは売上高の1%。加えて、EU市場からの製品撤去命令（リコール）のリスクがある。",
+      "evidence": "EU CRA Article 64（罰則）の条文による。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "EU CRA Article 64 (Penalties)",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST_NOT",
+      "standard_references": [
+        {
+          "standard": "EU CRA",
+          "section": "Article 64",
+          "mapping": "direct"
+        }
+      ]
+    },
+    {
+      "claim": "コスト試算は単一の楽観シナリオではなく3シナリオで提示すべき。楽観シナリオ（Default Category、SEMI実装良好、ISO 27001保有、単一製品）では5年間総費用2,000〜4,500万円、基準シナリオ（Class I、SEMI準拠標準的、ISO 27001未保有、2〜3製品）では5,000〜12,000万円、悲観シナリオ（Class I/II、SEMI書面のみ、多製品、OEM商流複雑）では12,000〜30,000万円。最大のコスト要因は初期構築ではなく5年間の継続運用費用であり、前ステップ分析では未計上である。",
+      "evidence": "not_stated（コスト推計は前ステップ分析の著者推論＋批判レビューの修正提案＋EU規制対応の業界一般知識に基づく統合推計であり、独立したベンチマークデータなし）",
+      "source": {
+        "source_type": "unknown",
+        "source_title": "コスト推計（著者推論・前ステップ統合）",
+        "source_locator": "not_stated",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier4",
+        "primary_source": false,
+        "community_score": null
+      },
+      "confidence": "low",
+      "requirement_level": null,
+      "standard_references": []
+    },
+    {
+      "claim": "2026年3月時点で、日本の半導体装置関連企業によるCRA完全準拠の公開事例は確認されていない。経産省（METI）がOTセキュリティガイドライン（半導体工場等向け）を2025年に公表、IoTセキュリティラベリング制度「JC-STAR」を立ち上げ、SBOM施策を日米欧の国際連携で推進している。大手装置メーカーではIEC 62443適用の設計変更プロジェクト立ち上げ、SBOM自動生成ツール導入、EU対応専任部門設置が開始されている。PwC Japan、マクニカ等がCRA対応コンサルティングサービスを提供。",
+      "evidence": "支援インフラの存在は確認。個別企業の準拠完了事例は未確認。経産省・PwC Japan・マクニカ・ITmedia等の情報源により部分確認。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "METI Cybersecurity Policy",
+        "source_locator": "https://www.meti.go.jp/english/policy/safety_security/cybersecurity/index.html",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": null,
+      "standard_references": []
+    }
+  ]
+}

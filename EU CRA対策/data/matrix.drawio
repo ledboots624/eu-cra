@@ -1,0 +1,95 @@
+<mxGraphModel dx="50" dy="50" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <!-- Title -->
+    <mxCell id="title" value="EU CRA vs SEMI規格(E187/E188) コンプライアンス比較マトリクス" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2C3E50;strokeColor=#1a252f;fontColor=#ffffff;fontSize=20;fontStyle=1;shadow=1;spacing=10;" vertex="1" parent="1">
+      <mxGeometry x="60" y="60" width="880" height="50" as="geometry" />
+    </mxCell>
+    
+    <!-- Headers -->
+    <mxCell id="h1" value="評価軸" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#34495E;strokeColor=#2c3e50;fontColor=#ecf0f1;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="60" y="120" width="160" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="h2" value="SEMI規格 (E187/E188) 現状" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#34495E;strokeColor=#2c3e50;fontColor=#ecf0f1;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="120" width="240" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="h3" value="EU CRA (必須要件)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#34495E;strokeColor=#2c3e50;fontColor=#ecf0f1;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="460" y="120" width="240" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="h4" value="判定・必要アクション" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#34495E;strokeColor=#2c3e50;fontColor=#ecf0f1;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="700" y="120" width="240" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- Row 1: Legal -->
+    <mxCell id="r1c1" value="規制・法的拘束力" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#BDC3C7;strokeColor=#95a5a6;fontColor=#2c3e50;fontSize=13;fontStyle=1;spacing=8;" vertex="1" parent="1">
+      <mxGeometry x="60" y="160" width="160" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="r1c2" value="△ 業界標準・契約ベース&#10;・顧客要求による準拠&#10;・法的罰則は及ばない" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FCF3CF;strokeColor=#F1C40F;fontColor=#7F8C8D;fontSize=12;align=left;spacing=8;" vertex="1" parent="1">
+      <mxGeometry x="220" y="160" width="240" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="r1c3" value="EU法による法的義務&#10;・CEマーキング必須&#10;・EU域内代理人(AR)の設置" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#bdc3c7;fontColor=#2c3e50;fontSize=12;align=left;spacing=8;" vertex="1" parent="1">
+      <mxGeometry x="460" y="160" width="240" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="r1c4" value="【要対応】体制構築&#10;・商流整理とEU代理人の契約&#10;・製品分類(Class I/II)の確定" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F1948A;strokeColor=#E74C3C;fontColor=#922B21;fontSize=12;align=left;spacing=8;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="700" y="160" width="240" height="80" as="geometry" />
+    </mxCell>
+
+    <!-- Row 2: Product Security -->
+    <mxCell id="r2c1" value="製品セキュリティ設計" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#BDC3C7;strokeColor=#95a5a6;fontColor=#2c3e50;fontSize=13;fontStyle=1;spacing=8;" vertex="1" parent="1">
+      <mxGeometry x="60" y="240" width="160" height="90" as="geometry" />
+    </mxCell>
+    <mxCell id="r2c2" value="○ 概ね適合&#10;・マルウェアフリー納品&#10;・エンドポイント保護&#10;・不要ポート閉塞" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5F5E3;strokeColor=#2ECC71;fontColor=#1E8449;fontSize=12;align=left;spacing=8;" vertex="1" parent="1">
+      <mxGeometry x="220" y="240" width="240" height="90" as="geometry" />
+    </mxCell>
+    <mxCell id="r2c3" value="Secure by Default&#10;・デフォルト最高設定&#10;・完全性検証機能&#10;・既知脆弱性なしでの出荷" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#bdc3c7;fontColor=#2c3e50;fontSize=12;align=left;spacing=8;" vertex="1" parent="1">
+      <mxGeometry x="460" y="240" width="240" height="90" as="geometry" />
+    </mxCell>
+    <mxCell id="r2c4" value="【良好】既存資産活用&#10;・SEMI E187準拠を基礎に強化&#10;・完全性検証の実装追加" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5F5E3;strokeColor=#2ECC71;fontColor=#1E8449;fontSize=12;align=left;spacing=8;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="700" y="240" width="240" height="90" as="geometry" />
+    </mxCell>
+
+    <!-- Row 3: Vulnerability Management -->
+    <mxCell id="r3c1" value="脆弱性管理・報告" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#BDC3C7;strokeColor=#95a5a6;fontColor=#2c3e50;fontSize=13;fontStyle=1;spacing=8;" vertex="1" parent="1">
+      <mxGeometry x="60" y="330" width="160" height="100" as="geometry" />
+    </mxCell>
+    <mxCell id="r3c2" value="△ ベストエフォート&#10;・保守契約に基づくパッチ提供&#10;・OSベンダー依存の対応&#10;・報告義務の規定なし" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FCF3CF;strokeColor=#F1C40F;fontColor=#7F8C8D;fontSize=12;align=left;spacing=8;" vertex="1" parent="1">
+      <mxGeometry x="220" y="330" width="240" height="100" as="geometry" />
+    </mxCell>
+    <mxCell id="r3c3" value="厳格な監視・報告義務&#10;・24時間以内の早期警告&#10;・72時間以内の詳細報告&#10;・製造後5年間の修正義務" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#bdc3c7;fontColor=#2c3e50;fontSize=12;align=left;spacing=8;" vertex="1" parent="1">
+      <mxGeometry x="460" y="330" width="240" height="100" as="geometry" />
+    </mxCell>
+    <mxCell id="r3c4" value="【最重要】運用プロセス刷新&#10;・PSIRT/監視体制の24/365化&#10;・ENISAへの報告ルート確立&#10;・2026年9月先行施行に対応" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F1948A;strokeColor=#E74C3C;fontColor=#922B21;fontSize=12;align=left;spacing=8;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="700" y="330" width="240" height="100" as="geometry" />
+    </mxCell>
+
+    <!-- Row 4: Documentation / SBOM -->
+    <mxCell id="r4c1" value="文書・SBOM" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#BDC3C7;strokeColor=#95a5a6;fontColor=#2c3e50;fontSize=13;fontStyle=1;spacing=8;" vertex="1" parent="1">
+      <mxGeometry x="60" y="430" width="160" height="90" as="geometry" />
+    </mxCell>
+    <mxCell id="r4c2" value="△ ドキュメントベース&#10;・システム構成図(PDF/Excel)&#10;・手動管理の資産リスト" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FCF3CF;strokeColor=#F1C40F;fontColor=#7F8C8D;fontSize=12;align=left;spacing=8;" vertex="1" parent="1">
+      <mxGeometry x="220" y="430" width="240" height="90" as="geometry" />
+    </mxCell>
+    <mxCell id="r4c3" value="機械可読データ&#10;・SBOM (CycloneDX/SPDX)&#10;・適合宣言書 (DoC)&#10;・技術文書 (Technical File)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#bdc3c7;fontColor=#2c3e50;fontSize=12;align=left;spacing=8;" vertex="1" parent="1">
+      <mxGeometry x="460" y="430" width="240" height="90" as="geometry" />
+    </mxCell>
+    <mxCell id="r4c4" value="【技術的課題】自動化導入&#10;・ビルドパイプラインへの&#10;　SBOM生成ツール組み込み&#10;・脆弱性DBとの自動照合" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F1948A;strokeColor=#E74C3C;fontColor=#922B21;fontSize=12;align=left;spacing=8;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="700" y="430" width="240" height="90" as="geometry" />
+    </mxCell>
+
+    <!-- Row 5: Penalty -->
+    <mxCell id="r5c1" value="リスク・ペナルティ" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#BDC3C7;strokeColor=#95a5a6;fontColor=#2c3e50;fontSize=13;fontStyle=1;spacing=8;" vertex="1" parent="1">
+      <mxGeometry x="60" y="520" width="160" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="r5c2" value="○ 商業リスク&#10;・顧客からの信頼低下&#10;・契約不履行による損害賠償" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5F5E3;strokeColor=#2ECC71;fontColor=#1E8449;fontSize=12;align=left;spacing=8;" vertex="1" parent="1">
+      <mxGeometry x="220" y="520" width="240" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="r5c3" value="行政処分・制裁金&#10;・最大1500万ユーロ&#10;　または売上高の2.5%&#10;・EU市場からの製品回収・排除" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FADBD8;strokeColor=#E74C3C;fontColor=#C0392B;fontSize=12;align=left;spacing=8;" vertex="1" parent="1">
+      <mxGeometry x="460" y="520" width="240" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="r5c4" value="【経営リスク】&#10;・経営層へのリスク定量的説明&#10;・コンプライアンス予算確保" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F1948A;strokeColor=#E74C3C;fontColor=#922B21;fontSize=12;align=left;spacing=8;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="700" y="520" width="240" height="80" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>

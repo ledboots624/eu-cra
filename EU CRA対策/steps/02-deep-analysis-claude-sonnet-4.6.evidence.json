@@ -1,0 +1,421 @@
+{
+  "step": 2,
+  "role": "deep-analysis",
+  "model": "claude-sonnet-4.6",
+  "extracted_at": "2026-03-17T00:58:53Z",
+  "claims": [
+    {
+      "claim": "CRA Annex I Part I は製品のライフサイクル全体にわたる13項目のセキュリティ要件を規定しており、「設計・開発・製造」段階における技術的義務を構成する。これらはすべてMUST要件であり、自己宣言（Module A）の対象製品（Default Category）においても省略不可能である。",
+      "evidence": "Annex I Part I は以下の主要要件を列挙している：(1) no known exploitable vulnerabilities、(2) secure by default configuration、(3) protection of confidentiality and integrity、(4) minimal attack surface、(5) effect mitigation、(6) security updates mechanism、(7) access control、(8) logging capability、(9) minimal data collection、(10) encrypted communications、(11) supply chain transparency、(12) removability、(13) incident containment。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/1183 Annex I, Part I",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+        "access_date": "2024-10",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Annex I Part I",
+          "mapping": "direct"
+        }
+      ]
+    },
+    {
+      "claim": "CRA Annex I Part II は製品の市場投入後（post-market）の継続的脆弱性管理を義務付けており、製品の「予想サポート期間」または最低5年間の対応を要求する。これはSEMI規格が明示的に要求しない時間軸の概念を導入する重要な差異点である。",
+      "evidence": "Part II の主要要件：(1) 脆弱性の特定・文書化・修正（報告された脆弱性を遅滞なく対処）、(2) セキュリティパッチの無償提供（最低5年間）、(3) 定期的セキュリティテスト、(4) CVE公開への対応（責任ある開示）、(5) 安全な廃棄機能、(6) SBOM作成・維持（機械可読）。SEMI E187/E188はサプライヤーによるパッチ提供期間を明示的に規定していない。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/1183 Annex I, Part II",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+        "access_date": "2024-10",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Annex I Part II",
+          "mapping": "direct"
+        },
+        {
+          "standard": "SEMI E187",
+          "section": "全体",
+          "mapping": "gap"
+        },
+        {
+          "standard": "SEMI E188",
+          "section": "全体",
+          "mapping": "gap"
+        }
+      ]
+    },
+    {
+      "claim": "SEMI E187-0122（2022年版）は、半導体ファブ設備のサイバーセキュリティを対象に、OS管理・セキュリティ設定・アクセス制御・通信セキュリティ・セキュリティパッチ管理の5領域を規定している。",
+      "evidence": "Section 3.1: OS and Software（サポートされたOSのみ使用、EOL OS禁止、セキュリティパッチ適時適用）、Section 3.2: Anti-Malware（アンチマルウェア機能の実装または代替制御）、Section 3.3: Network Security（不必要なポート/プロトコルの無効化、ファイアウォール設定）、Section 3.4: User Access（最小権限の原則、アカウント管理、パスワードポリシー）、Section 3.5: Remote Access（リモートアクセスの承認制御、VPN/暗号化要件）、Section 3.6: Physical Security、Section 3.7: Documentation（セキュリティ構成ドキュメントの提供義務）。",
+      "source": {
+        "source_type": "industry_report",
+        "source_title": "SEMI E187-0122 Specification for Cybersecurity of Fab Equipment",
+        "source_locator": "https://store-us.semi.org/products/e18700",
+        "access_date": "2022",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": null,
+      "standard_references": [
+        {
+          "standard": "SEMI E187",
+          "section": "§3.1–§3.7",
+          "mapping": "direct"
+        }
+      ]
+    },
+    {
+      "claim": "SEMI E188-0120（2020年版）は、ファブへの設備搬入時のマルウェアフリー状態保証に特化しており、サプライチェーンセキュリティ（製造・出荷・設置段階）を対象とする。CRA Annex I のサプライチェーン透明性要件と部分的に重複するが、継続的な脆弱性管理は対象外である。",
+      "evidence": "Section 4.1: Software Inventory（設備搭載ソフトウェアのインベントリ作成）、Section 4.2: Malware Scan（出荷前の全コンポーネントに対するマルウェアスキャン）、Section 4.3: Software Integrity（ハッシュ検証等によるインテグリティ確認）、Section 4.4: Patch Status（出荷時点のパッチ状態の文書化・顧客報告）、Section 4.5: Third-party Components（組み込みサードパーティソフトウェアの識別と脆弱性状態報告）。補足：SEMI Cybersecurity Overview White Paper (2023, tier2) を参照。",
+      "source": {
+        "source_type": "industry_report",
+        "source_title": "SEMI E188-0120 Specification for Malware Free Equipment Integration",
+        "source_locator": "https://store-us.semi.org/products/e18800",
+        "access_date": "2020",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": null,
+      "standard_references": [
+        {
+          "standard": "SEMI E188",
+          "section": "§4.1–§4.5",
+          "mapping": "direct"
+        },
+        {
+          "standard": "CRA",
+          "section": "Annex I Part I §11 (supply chain transparency)",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "CRA Article 11は、「悪用された脆弱性（actively exploited vulnerability）」および「深刻なインシデント（severe incident）」に対して段階的報告義務を課しており、24時間以内の早期警告（early warning）、72時間以内の通知（notification）、最終的な最終報告（final report）の3段階構造となっている。SEMI E187/E188には当局への報告義務プロセスが存在せず、完全な新規構築が必要である。",
+      "evidence": "24時間早期警告：ENISAおよびCSIRTへの早期警告（インシデント認知から24時間以内）。72時間通知：詳細な通知（インシデント規模、影響範囲、暫定対策）。1ヶ月最終報告：根本原因、実施した対策、今後の予防策。報告先：国別のCSIRT（Computer Security Incident Response Team）またはENISA（EU Cybersecurity Agency）。対象トリガー：'actively exploited vulnerability' かつ 'severe and direct impact on security'。対応コスト概算：報告フロー設計・CSIRT連絡先登録・インシデント判定基準策定に20〜40人日（初期構築）、維持コスト年間5〜10人日。補足：ENISA CRA Implementation Guidance Overview (2024, tier3) を参照。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/1183 Article 11",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+        "access_date": "2024-10",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Article 11",
+          "mapping": "direct"
+        },
+        {
+          "standard": "SEMI E187",
+          "section": "全体",
+          "mapping": "gap"
+        },
+        {
+          "standard": "SEMI E188",
+          "section": "全体",
+          "mapping": "gap"
+        }
+      ]
+    },
+    {
+      "claim": "CRA Article 20およびArticle 22は、Annex IVに規定される様式に従ったDoC（Declaration of Conformity）の作成と、製品へのCEマーキング貼付を製造者に義務付けている。DoCにはCRA準拠の技術的根拠を記載する必要があり、これは「Annex I要件の充足を宣言する法的文書」である。SEMI規格は顧客向けセキュリティ準拠宣言の枠組みを持つが、EU法令規定の法的形式・言語要件・技術文書添付義務とは根本的に異なる。",
+      "evidence": "DoC記載必須事項（Annex IV）：製造者名・住所、製品識別情報、適用規制・規格の列挙、名前と署名、発行日。DoCはEU公用語のいずれかで作成し、市場監督当局に提出可能な状態を保つ義務あり。Default Category製品（多くの半導体装置ソフトウェア）はModule A（自己宣言）が適用可能で第三者認証は不要。Class I製品は第三者認証またはEN 18031等の調和規格適用が必要。CEマーキングは技術文書（Annex V要件）完備後にのみ貼付可能。対応コスト概算：DoCドラフト作成・法務レビュー・技術文書整備に50〜100人日（初期）、更新維持に年間10〜20人日。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/1183 Articles 20-22, Annex IV, Annex V",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+        "access_date": "2024-10",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Article 20, Article 22, Annex IV, Annex V",
+          "mapping": "direct"
+        },
+        {
+          "standard": "SEMI E187",
+          "section": "全体",
+          "mapping": "gap"
+        },
+        {
+          "standard": "SEMI E188",
+          "section": "全体",
+          "mapping": "gap"
+        }
+      ]
+    },
+    {
+      "claim": "CRAは機械可読SBOM（Software Bill of Materials）の作成と最新状態の維持を義務付けており、SEMI E188の「Software Inventory」がその前身として活用可能だが、形式上の完全性に大きなギャップが存在する。特に、CRAはSBOMをCycloneDX（ECMA-424）またはSPDX（ISO/IEC 5962:2021）等の業界標準フォーマットで提供することをベストプラクティスとして強く示唆しており（Recital 58および実施法令で詳細化予定）、実質的にはこれらのフォーマットが事実上の要件となる。",
+      "evidence": "CRA Annex I Part II: 'software bill of materials in a commonly used and machine-readable format'。Recital 58: SBOM開示対象は顧客・当局・ユーザーで一般公開は必須ではなく「請求があった場合に提供」でも可。SEMI E188 §4.1のSoftware Inventoryは人手管理のExcelリストレベルが多く、CycloneDXの構造化フォーマット（dependencies, licenses, vulnerabilities要素）には非対応。OSSツール主要候補：Syft（Anchore）、CycloneDX-cli、OSS Review Toolkit（ORT）、SPDX-tools。対応コスト概算：SBOM生成ツール導入・ビルドパイプライン組み込みに15〜30人日、既存E188インベントリのCycloneDX変換に5〜10人日。補足：ENISA SBOM Minimum Requirements for CRA Compliance (Draft, 2024, tier2) を参照。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/1183 Annex I Part II, Recital 58",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+        "access_date": "2024-10",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Annex I Part II, Recital 58",
+          "mapping": "direct"
+        },
+        {
+          "standard": "SEMI E188",
+          "section": "§4.1 Software Inventory",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "CRAは製品の「サポート期間（support period）」として「製品の予想ライフサイクル」または最低5年のいずれか長い方の間、セキュリティアップデートを無償で提供する義務を課している。SEMI E187はパッチを「適時に適用する」義務をユーザー側（ファブ）に課しているが、サプライヤーがパッチを作成・提供し続ける期間を明示的に規定していない点が本質的なギャップである。",
+      "evidence": "CRA Annex I Part II §1: 'ensure vulnerabilities can be addressed through security updates... for a period of at least five years'。E187は「サポートされたOS」の使用を要求するが、サプライヤーの5年間パッチ提供義務は規定なし。半導体装置は10〜20年の設備寿命を持つことが多く、5年サポートは最低ラインに過ぎない（CRAは製品寿命が5年超の場合はそれを上回る期間の対応を要求）。補足：ENISA Guidelines on CRA Vulnerability Management (2024, tier2) を参照。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/1183 Annex I Part II §1",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+        "access_date": "2024-10",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Annex I Part II §1",
+          "mapping": "direct"
+        },
+        {
+          "standard": "SEMI E187",
+          "section": "§3.1 OS and Software",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "CRA Article 13.6は、製造者が「脆弱性の報告を受け付けるための連絡先（contact point）を公開」し、「CVD（Coordinated Vulnerability Disclosure）ポリシーを明示する」ことを要求している。SEMI規格にはこのような製造者主導の公開脆弱性開示ポリシーの概念が存在しない。",
+      "evidence": "製造者は自社ウェブサイトまたは製品ドキュメントにセキュリティ連絡先を明示することが要求される。CRA Article 13.6: 報告された脆弱性に対応するプロセス（VDP）を持ち、外部研究者・ユーザーからの報告窓口を整備。参照規格：ISO/IEC 29147（脆弱性開示）およびISO/IEC 30111（脆弱性ハンドリング）。日本企業にとって英語での窓口整備とEUタイムゾーンでの応答性確保が実務上の課題。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/1183 Article 13.6",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+        "access_date": "2024-10",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Article 13.6",
+          "mapping": "direct"
+        },
+        {
+          "standard": "SEMI E187",
+          "section": "全体",
+          "mapping": "gap"
+        },
+        {
+          "standard": "SEMI E188",
+          "section": "全体",
+          "mapping": "gap"
+        }
+      ]
+    },
+    {
+      "claim": "CRA Annex I Part I §8は「ユーザーが関連するセキュリティイベントのログを記録・モニタリングできる機能」を要求するが、SEMI E187 §3.4のアカウントログ要件より広範であり、認証失敗・設定変更・ネットワーク接続等の包括的なセキュリティイベントログが対象となる。",
+      "evidence": "E187はアクセスログ・認証ログを対象とするが、ネットワーク接続ログ・設定変更ログ・セキュリティアラートログの要求水準はCRAの方が高い。ログの保持期間・フォーマット・エクスポート機能については、CRAの委任法令（Implementing Acts）で詳細化予定（未確定）。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/1183 Annex I Part I §8",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+        "access_date": "2024-10",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Annex I Part I §8",
+          "mapping": "direct"
+        },
+        {
+          "standard": "SEMI E187",
+          "section": "§3.4 User Access",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "CRA Annex I §9は「個人データ・コンテンツ・機能の処理を技術的に必要な最小限に限定する」設計を要求する。半導体装置のソフトウェアが診断テレメトリやオペレーター識別情報を収集する場合、この要件への対応が必要となる。SEMI E187/E188はプライバシー保護を扱わない。",
+      "evidence": "GDPR（Regulation (EU) 2016/679）のPrivacy by Design原則とCRA要件が重複しており、GDPR準拠企業はCRAのこの側面を部分的に充足できる可能性がある。半導体装置ソフトウェアが「個人データ」を処理しない場合（純粋な設備制御・プロセスデータのみ）、この要件の実質的影響は限定的（推測）。適用範囲の解釈に不確定要素あり。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/1183 Annex I Part I §9",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+        "access_date": "2024-10",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Annex I Part I §9",
+          "mapping": "direct"
+        },
+        {
+          "standard": "SEMI E187",
+          "section": "全体",
+          "mapping": "gap"
+        },
+        {
+          "standard": "SEMI E188",
+          "section": "全体",
+          "mapping": "gap"
+        }
+      ]
+    },
+    {
+      "claim": "以下のSEMI準拠資産はCRA要件を直接または大幅な修正なしに充足できる「高価値再利用資産」であり、対応工数を大幅に削減できる。具体的には、E187 §3.3 不要ポート/サービス無効化記録（→Annex I §4 Minimal attack surface）、E187 §3.4 アクセス制御手順書（→Annex I §7 Access control）、E187 §3.1 OS更新・パッチ管理手順（→Annex I §6 + Part II §1）、E188 §4.1-4.5 Software Inventory（→Annex I Part II §6 SBOM）、E187 §3.5 リモートアクセス制御（→Annex I §10 Encrypted communications）、E188 §4.2 マルウェアスキャン記録（→Annex I §1 No known vulnerabilities）の6資産が該当する。",
+      "evidence": "マッピング表より：E187 §3.3（不要ポート/サービス無効化記録）はCRA Annex I Part I §4（Minimal attack surface）に直接対応し、英語化・EU法令フォーマット変換のみで転用可能。E187 §3.4（アクセス制御手順書）はAnnex I Part I §7（Access control）の証拠として使用可能で網羅性確認・英語化が追加作業。E187 §3.1（OS更新・パッチ管理手順）はAnnex I Part I §6およびPart II §1に対応し5年間提供義務の担保プロセス追加が必要。E188 §4.1-4.5（Software Inventory）はAnnex I Part II §6（SBOM）の原データとして活用可能でCycloneDX/SPDXフォーマットへの変換が必要。E187 §3.5（リモートアクセス制御）はAnnex I §10（Encrypted communications）の証拠として使用可能でローカル通信の暗号化要件の追加確認が必要。E188 §4.2（マルウェアスキャン記録）はAnnex I §1（No known vulnerabilities）の出荷時検証証拠として転用可能で継続的な市場投入後スキャンの追加が必要。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/1183 Annex I, Annex V",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/1183/oj",
+        "access_date": "2024-10",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": null,
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Annex I, Annex V",
+          "mapping": "direct"
+        },
+        {
+          "standard": "SEMI E187",
+          "section": "§3.1, §3.3, §3.4, §3.5",
+          "mapping": "direct"
+        },
+        {
+          "standard": "SEMI E188",
+          "section": "§4.1–§4.5",
+          "mapping": "direct"
+        }
+      ]
+    },
+    {
+      "claim": "以下の資産は既存のSEMI準拠文書を拡張することでCRA要件を充足できるが、一定の新規作業が必要である。これらへの投資は既存文書の改訂として位置づけられるため、ゼロベース構築より50〜70%のコスト削減効果が見込まれる（推測）。",
+      "evidence": "部分再利用資産の3項目：(1) E187 §3.7 セキュリティ構成ドキュメント（Annex V技術文書の形式・必須記載事項が不足→製品識別・ライフサイクル宣言・DoC参照を追加）、(2) E187 §3.4 アカウントログ（Annex I Part I §8のセキュリティイベントログより狭い→ネットワーク接続・設定変更・セキュリティアラートログを追加）、(3) E188 §4.4 Patch Status文書（CRA Annex I Part IIの5年間継続提供義務の担保なし→サポートライフサイクルポリシーの追加・公開が必要）。コスト削減率50〜70%は著者の推論であり定量的裏付けなし。",
+      "source": {
+        "source_type": "unknown",
+        "source_title": "著者の規格間比較分析",
+        "source_locator": "not_stated",
+        "access_date": "unknown",
+        "reliability_tier": "tier4",
+        "primary_source": false,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": null,
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Annex I, Annex V",
+          "mapping": "partial"
+        },
+        {
+          "standard": "SEMI E187",
+          "section": "§3.4, §3.7",
+          "mapping": "partial"
+        },
+        {
+          "standard": "SEMI E188",
+          "section": "§4.4",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "SEMI E187/E188準拠企業は、CRA Annex I Part I（製品設計要件）において約60〜70%の要件を既存資産で充足できると推定される。一方、Annex I Part II（脆弱性管理要件）および法的文書要件（DoC/CEマーキング）はほぼ0%が新規対応であり、プロセス・文書整備に集中投資が必要である。",
+      "evidence": "マッピング表において、13項目のPart I要件のうち◎または△対応は10項目（77%）。ただし△項目には追加作業が必要であるため、完全充足率は60〜70%と見積もる。Part II（6項目）では完全充足はゼロ。推定値にはSEMI規格の実装水準が企業により異なるため±15%の幅がある。本推定は著者のマッピング分析に基づく推論であり、定量的裏付けは業界調査等で補完が必要。",
+      "source": {
+        "source_type": "unknown",
+        "source_title": "著者のマッピング分析",
+        "source_locator": "not_stated",
+        "access_date": "unknown",
+        "reliability_tier": "tier4",
+        "primary_source": false,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": null,
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Annex I Part I",
+          "mapping": "partial"
+        },
+        {
+          "standard": "CRA",
+          "section": "Annex I Part II",
+          "mapping": "gap"
+        },
+        {
+          "standard": "SEMI E187",
+          "section": "全体",
+          "mapping": "partial"
+        },
+        {
+          "standard": "SEMI E188",
+          "section": "全体",
+          "mapping": "partial"
+        }
+      ]
+    }
+  ]
+}

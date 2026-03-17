@@ -1,0 +1,293 @@
+{
+  "step": 3,
+  "role": "technical-strategy",
+  "model": "gpt-5.3-codex",
+  "extracted_at": "2026-03-17T01:17:26Z",
+  "claims": [
+    {
+      "claim": "CRA対応の最小コスト化は、SEMI E188の既存Software Inventoryを機械可読SBOMへ変換し、報告ワークフロー（24h/72h）を先行実装する方針が最も実装効率が高い。",
+      "evidence": "CRAは機械可読SBOM（少なくともトップレベル依存関係）と脆弱性報告を義務化し、SEMI側にはインベントリ・装置セキュリティ基盤が既に存在する。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/2847",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Annex I",
+          "mapping": "partial"
+        },
+        {
+          "standard": "SEMI E188",
+          "section": "Software Inventory",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "CRA報告運用は、ENISA SRP前提のテンプレート駆動運用にすると、日本企業でも24時間通知義務を現実的に運用可能。",
+      "evidence": "ENISAのSingle Reporting Platform（SRP）運用と、EU公式のCRA報告期限（24h/72h/最終報告）が示されている。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "ENISA Single Reporting Platform (SRP)",
+        "source_locator": "https://www.enisa.europa.eu/topics/product-security-and-certification/single-reporting-platform-srp",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Article 14/16",
+          "mapping": "gap"
+        },
+        {
+          "standard": "SEMI E187",
+          "section": "not_stated",
+          "mapping": "gap"
+        },
+        {
+          "standard": "SEMI E188",
+          "section": "not_stated",
+          "mapping": "gap"
+        }
+      ]
+    },
+    {
+      "claim": "製品設計は「新規再設計」よりも、CRA Annex I要求をSEMI既存制御へマッピングし不足分だけ実装する方式が低コスト。",
+      "evidence": "E187はアクセス制御・ネットワーク最小化・パッチ管理で重複領域がある一方、ログ網羅性・VDP・当局報告は不足。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/2847",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Annex I",
+          "mapping": "partial"
+        },
+        {
+          "standard": "SEMI E187",
+          "section": "not_stated",
+          "mapping": "partial"
+        },
+        {
+          "standard": "SEMI E188",
+          "section": "not_stated",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "CRA最小準拠を狙うなら、法令必須に加え、監査・顧客説明で破綻しない最小フィールドセットを最初から固定すべき。",
+      "evidence": "CycloneDX/SPDXの必須属性と依存記述要素が明示されている。",
+      "source": {
+        "source_type": "industry_report",
+        "source_title": "CycloneDX BOM 1.6 schema",
+        "source_locator": "https://github.com/CycloneDX/specification/blob/master/schema/bom-1.6.schema.json",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier2",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "not_stated",
+          "mapping": "partial"
+        },
+        {
+          "standard": "CycloneDX",
+          "section": "BOM 1.6 schema",
+          "mapping": "partial"
+        },
+        {
+          "standard": "SPDX",
+          "section": "2.3",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "日本企業での実装は、英日テンプレート＋PSIRT当番＋自動証跡収集の3点セットで運用負荷を最小化できる。",
+      "evidence": "SRPへの期限付き報告には、事前定義テンプレートと迅速なトリアージ体制が必要。PSIRT標準フレームワークでも同様の工程が推奨。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "European Commission CRA reporting page",
+        "source_locator": "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Article 14/16",
+          "mapping": "direct"
+        },
+        {
+          "standard": "FIRST PSIRT Services Framework",
+          "section": "v1.1",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "連絡窓口公開は security.txt + 専用メール + 公開VDP の3点で最短実装できる。",
+      "evidence": "CRAは脆弱性受付連絡先の明示を求め、RFC 9116は標準化された公開方法を提供。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/2847",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Article 13(6)",
+          "mapping": "direct"
+        },
+        {
+          "standard": "RFC 9116",
+          "section": "not_stated",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "脆弱性件数が少ない段階では、自社CNA化よりRoot CNA連携の方が低コスト。",
+      "evidence": "CNAは運用ルール遵守・人的継続リソースが必要。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "CVE CNA Rules v4.1",
+        "source_locator": "https://www.cve.org/Resources/Roles/Cnas/CNA_Rules_v4.1.0.pdf",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MAY",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "脆弱性運用",
+          "mapping": "direct"
+        },
+        {
+          "standard": "CVE Program",
+          "section": "CNA Rules v4.1",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "「報告運用先行→SBOM自動化→設計改修」の順が、罰則回避と現場負荷のバランスが最も良い。",
+      "evidence": "報告義務は先行適用され、SBOMはツール導入で短期に可視化可能、設計改修は最も時間を要する。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "European Commission CRA reporting page",
+        "source_locator": "https://digital-strategy.ec.europa.eu/en/policies/cra-reporting",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "reporting/SBOM",
+          "mapping": "direct"
+        },
+        {
+          "standard": "CRA",
+          "section": "Annex I（設計改修）",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "本件の最適解は「CRA必須のMUSTを先に閉じる」戦略。具体的にはSBOM機械可読化と24h/72h報告運用を最優先し、製品設計はSEMI資産を再利用して差分実装する。",
+      "evidence": "法令リスク直結領域（報告・脆弱性運用・SBOM）は期限拘束が強く、SEMI既存資産で再利用余地が大きい。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/2847",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "not_stated",
+          "mapping": "direct"
+        },
+        {
+          "standard": "SEMI E187",
+          "section": "not_stated",
+          "mapping": "partial"
+        },
+        {
+          "standard": "SEMI E188",
+          "section": "not_stated",
+          "mapping": "gap"
+        }
+      ]
+    },
+    {
+      "claim": "SBOM要素の実装細目や報告手順の一部は、実施法・ガイダンス更新で変動余地があるため、四半期ごとに法令ウォッチを組み込むのが安全。",
+      "evidence": "not_stated",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/2847",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": "SHOULD",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "not_stated",
+          "mapping": "partial"
+        }
+      ]
+    }
+  ]
+}

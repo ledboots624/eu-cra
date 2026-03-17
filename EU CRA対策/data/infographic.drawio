@@ -1,0 +1,208 @@
+<mxGraphModel dx="50" dy="50" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- 全体枠（余白ガイド用・非表示推奨だが背景として配置） -->
+    <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="0" y="0" width="800" height="1200" as="geometry" />
+    </mxCell>
+
+    <!-- ヘッダー -->
+    <mxCell id="header_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1A237E;strokeColor=none;shadow=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="40" width="720" height="100" as="geometry" />
+    </mxCell>
+    <mxCell id="header_title" value="EU CRA対策戦略（SEMI規格準拠企業向け）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="1">
+      <mxGeometry x="70" y="55" width="660" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="header_subtitle" value="既存資産（SEMI E187/E188）活用による低コスト・確実な準拠ロードマップ" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontColor=#E8EAF6;" vertex="1" parent="1">
+      <mxGeometry x="70" y="95" width="660" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- セクション1: 規制スコープと重要期限 -->
+    <mxCell id="sec1_title" value="01. 規制スコープと重要期限" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#B71C1C;" vertex="1" parent="1">
+      <mxGeometry x="50" y="170" width="400" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="sec1_line" value="" style="endArrow=none;html=1;strokeColor=#B71C1C;strokeWidth=3;" edge="1" parent="1">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="50" y="205" as="sourcePoint" />
+        <mxPoint x="750" y="205" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 期限ボックス1 -->
+    <mxCell id="date1_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#EF9A9A;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="50" y="220" width="340" height="140" as="geometry" />
+    </mxCell>
+    <mxCell id="date1_head" value="2026年9月 (最優先)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#D32F2F;" vertex="1" parent="1">
+      <mxGeometry x="60" y="230" width="320" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="date1_icon" value="⚠️" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=28;" vertex="1" parent="1">
+      <mxGeometry x="60" y="260" width="50" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="date1_text" value="脆弱性報告義務の先行施行&#10;インシデント発生から24時間以内の報告体制が必須" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=13;fontColor=#333333;" vertex="1" parent="1">
+      <mxGeometry x="120" y="270" width="250" height="80" as="geometry" />
+    </mxCell>
+
+    <!-- 期限ボックス2 -->
+    <mxCell id="date2_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#90CAF9;shadow=0;" vertex="1" parent="1">
+      <mxGeometry x="410" y="220" width="340" height="140" as="geometry" />
+    </mxCell>
+    <mxCell id="date2_head" value="2027年12月 (完全適用)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#1976D2;" vertex="1" parent="1">
+      <mxGeometry x="420" y="230" width="320" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="date2_icon" value="✅" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=28;" vertex="1" parent="1">
+      <mxGeometry x="420" y="260" width="50" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="date2_text" value="製品設計要件・適合宣言(DoC)&#10;CEマーキング義務化&#10;技術文書の完備" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=13;fontColor=#333333;" vertex="1" parent="1">
+      <mxGeometry x="480" y="270" width="250" height="80" as="geometry" />
+    </mxCell>
+
+    <!-- セクション2: SEMI規格とのギャップ -->
+    <mxCell id="sec2_title" value="02. SEMI E187/E188とのギャップ分析" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#0D47A1;" vertex="1" parent="1">
+      <mxGeometry x="50" y="400" width="400" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="sec2_line" value="" style="endArrow=none;html=1;strokeColor=#0D47A1;strokeWidth=3;" edge="1" parent="1">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="50" y="435" as="sourcePoint" />
+        <mxPoint x="750" y="435" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- SEMI活用領域 -->
+    <mxCell id="gap_left" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#81C784;" vertex="1" parent="1">
+      <mxGeometry x="50" y="450" width="340" height="180" as="geometry" />
+    </mxCell>
+    <mxCell id="gap_left_title" value="SEMI規格 (再利用可能)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#2E7D32;" vertex="1" parent="1">
+      <mxGeometry x="50" y="460" width="340" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="gap_left_list" value="● 資産管理台帳 (Software Inventory)&#10;● マルウェア対策プロセス&#10;● 基本的なエンドポイント保護&#10;● サポート終了(EOS)管理" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=13;fontColor=#1B5E20;leading=6;" vertex="1" parent="1">
+      <mxGeometry x="70" y="495" width="300" height="120" as="geometry" />
+    </mxCell>
+
+    <!-- CRA追加要件 -->
+    <mxCell id="gap_right" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FFB74D;" vertex="1" parent="1">
+      <mxGeometry x="410" y="450" width="340" height="180" as="geometry" />
+    </mxCell>
+    <mxCell id="gap_right_title" value="CRA追加対応 (Must要件)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#E65100;" vertex="1" parent="1">
+      <mxGeometry x="410" y="460" width="340" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="gap_right_list" value="● 機械可読SBOM (CycloneDX/SPDX)&#10;● 24時間/72時間の厳格な報告義務&#10;● 実装の客観的証明 (CE宣言)&#10;● EU代理人の設置 (製造者責任)" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=13;fontColor=#BF360C;leading=6;" vertex="1" parent="1">
+      <mxGeometry x="430" y="495" width="300" height="120" as="geometry" />
+    </mxCell>
+
+    <!-- 矢印 -->
+    <mxCell id="gap_arrow" value="GAP" style="shape=singleArrow;whiteSpace=wrap;html=1;arrowWidth=0.4;arrowSize=0.4;fillColor=#757575;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="365" y="520" width="70" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- セクション3: 技術戦略 -->
+    <mxCell id="sec3_title" value="03. 技術戦略とコスト最適化" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#00695C;" vertex="1" parent="1">
+      <mxGeometry x="50" y="660" width="400" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="sec3_line" value="" style="endArrow=none;html=1;strokeColor=#00695C;strokeWidth=3;" edge="1" parent="1">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="50" y="695" as="sourcePoint" />
+        <mxPoint x="750" y="695" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- 戦略1 -->
+    <mxCell id="strat1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B2DFDB;strokeWidth=2;" vertex="1" parent="1">
+      <mxGeometry x="50" y="710" width="220" height="150" as="geometry" />
+    </mxCell>
+    <mxCell id="strat1_icon" value="📄 ➔ 💻" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+      <mxGeometry x="50" y="720" width="220" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="strat1_title" value="SBOM変換" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#00695C;" vertex="1" parent="1">
+      <mxGeometry x="50" y="760" width="220" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="strat1_desc" value="SEMI E188のInventoryを&#10;機械可読なCycloneDXへ変換。&#10;ゼロからの作成を回避。" style="text;html=1;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#455A64;" vertex="1" parent="1">
+      <mxGeometry x="60" y="785" width="200" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- 戦略2 -->
+    <mxCell id="strat2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B2DFDB;strokeWidth=2;" vertex="1" parent="1">
+      <mxGeometry x="290" y="710" width="220" height="150" as="geometry" />
+    </mxCell>
+    <mxCell id="strat2_icon" value="🛠️" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+      <mxGeometry x="290" y="720" width="220" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="strat2_title" value="OSSツール活用" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#00695C;" vertex="1" parent="1">
+      <mxGeometry x="290" y="760" width="220" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="strat2_desc" value="Syft/GrypeなどのOSSツールで&#10;生成・管理コストを抑制。&#10;高額な商用ツールへの依存低減。" style="text;html=1;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#455A64;" vertex="1" parent="1">
+      <mxGeometry x="300" y="785" width="200" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- 戦略3 -->
+    <mxCell id="strat3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B2DFDB;strokeWidth=2;" vertex="1" parent="1">
+      <mxGeometry x="530" y="710" width="220" height="150" as="geometry" />
+    </mxCell>
+    <mxCell id="strat3_icon" value="⚖️" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="1">
+      <mxGeometry x="530" y="720" width="220" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="strat3_title" value="重複規格活用" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#00695C;" vertex="1" parent="1">
+      <mxGeometry x="530" y="760" width="220" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="strat3_desc" value="ISO 27001/IEC 62443との&#10;重複管理による工数削減。&#10;一元的な文書管理体制。" style="text;html=1;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#455A64;" vertex="1" parent="1">
+      <mxGeometry x="540" y="785" width="200" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- セクション4: ロードマップ -->
+    <mxCell id="sec4_title" value="04. 段階的導入ロードマップ" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#EF6C00;" vertex="1" parent="1">
+      <mxGeometry x="50" y="890" width="400" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="sec4_line" value="" style="endArrow=none;html=1;strokeColor=#EF6C00;strokeWidth=3;" edge="1" parent="1">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="50" y="925" as="sourcePoint" />
+        <mxPoint x="750" y="925" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- フェーズ矢印 1 -->
+    <mxCell id="ph1" value="" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#FFE0B2;strokeColor=#FFB74D;" vertex="1" parent="1">
+      <mxGeometry x="50" y="940" width="230" height="100" as="geometry" />
+    </mxCell>
+    <mxCell id="ph1_text" value="Phase 1: 学習・体制構築&#10;(〜6ヶ月)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#E65100;" vertex="1" parent="1">
+      <mxGeometry x="60" y="950" width="200" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="ph1_detail" value="・責任主体/商流の確定&#10;・EU代理人の検討&#10;・SEMI資産棚卸し" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#333333;" vertex="1" parent="1">
+      <mxGeometry x="80" y="980" width="180" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- フェーズ矢印 2 -->
+    <mxCell id="ph2" value="" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#FFCC80;strokeColor=#FFA726;" vertex="1" parent="1">
+      <mxGeometry x="270" y="940" width="230" height="100" as="geometry" />
+    </mxCell>
+    <mxCell id="ph2_text" value="Phase 2: 技術実装&#10;(〜12ヶ月)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#E65100;" vertex="1" parent="1">
+      <mxGeometry x="290" y="950" width="190" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="ph2_detail" value="・脆弱性報告体制(PSIRT)&#10;・SBOM生成フロー確立&#10;・24時間通知テスト" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#333333;" vertex="1" parent="1">
+      <mxGeometry x="310" y="980" width="170" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- フェーズ矢印 3 -->
+    <mxCell id="ph3" value="" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#FFB74D;strokeColor=#FB8C00;" vertex="1" parent="1">
+      <mxGeometry x="490" y="940" width="230" height="100" as="geometry" />
+    </mxCell>
+    <mxCell id="ph3_text" value="Phase 3: 認証・宣言&#10;(〜18ヶ月)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#E65100;" vertex="1" parent="1">
+      <mxGeometry x="510" y="950" width="190" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="ph3_detail" value="・技術文書の完成&#10;・適合宣言(DoC)発行&#10;・CEマーキング貼付" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#333333;" vertex="1" parent="1">
+      <mxGeometry x="530" y="980" width="170" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- 結論・提言 -->
+    <mxCell id="concl_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#37474F;strokeColor=none;shadow=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="1080" width="720" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="concl_title" value="結論: 最優先アクション" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#FFD54F;" vertex="1" parent="1">
+      <mxGeometry x="60" y="1090" width="680" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="concl_text" value="「商流・責任主体の法的確定」と「24時間報告体制の先行構築」が急務。&#10;SEMI資産を文書ベースで活用しつつ、実装証明の自動化へ投資を行うべきである。" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontColor=#ECEFF1;" vertex="1" parent="1">
+      <mxGeometry x="60" y="1115" width="680" height="40" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>

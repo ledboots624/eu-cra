@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Helvetica Neue', 'Noto Sans JP', sans-serif; background: #f5f7fa; color: #2d3748; line-height: 1.7; }
+  .hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: #e2e8f0; padding: 60px 40px; text-align: center; }
+  .hero h1 { font-size: 2.2em; margin-bottom: 12px; }
+  .hero p { font-size: 1.1em; color: #a0aec0; max-width: 700px; margin: 0 auto; }
+  .hero .meta { margin-top: 20px; font-size: 0.85em; color: #718096; }
+  .hero .meta span { margin: 0 12px; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  .section { padding: 50px 0; }
+  .section-title { font-size: 1.5em; font-weight: 700; color: #1a202c; margin-bottom: 8px; }
+  .section-subtitle { font-size: 0.95em; color: #718096; margin-bottom: 30px; }
+  .about-box { background: #fff; border-radius: 12px; padding: 30px; margin-bottom: 40px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #4299e1; }
+  .about-box h3 { color: #2b6cb0; margin-bottom: 12px; }
+  .about-box ul { padding-left: 20px; color: #4a5568; }
+  .about-box li { margin-bottom: 6px; }
+  .visual-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 30px; }
+  .visual-card img { width: 100%; height: auto; display: block; cursor: pointer; transition: transform 0.2s; }
+  .visual-card img:hover { transform: scale(1.02); }
+  .visual-card .caption { padding: 16px 20px; }
+  .visual-card .caption h3 { font-size: 1.1em; color: #2d3748; }
+  .visual-card .caption p { font-size: 0.9em; color: #718096; margin-top: 4px; }
+  .visual-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+  .step-card { background: #fff; border-radius: 10px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 6px rgba(0,0,0,0.06); display: flex; gap: 16px; align-items: flex-start; }
+  .step-number { background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; font-weight: 700; font-size: 0.85em; padding: 8px 14px; border-radius: 8px; white-space: nowrap; }
+  .step-role { font-weight: 700; font-size: 1.05em; color: #2d3748; }
+  .step-model { font-size: 0.8em; color: #a0aec0; margin-top: 2px; display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+  .step-tag { display: inline-block; background: #edf2f7; color: #4a5568; font-size: 0.85em; padding: 1px 8px; border-radius: 4px; }
+  .step-summary { font-size: 0.9em; color: #4a5568; margin-top: 8px; }
+  .step-link { display: inline-block; margin-top: 8px; color: #4299e1; text-decoration: none; font-size: 0.9em; font-weight: 600; }
+  .step-link:hover { text-decoration: underline; }
+  .slides-frame { width: 100%; height: 500px; border: none; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
+  .qa-list { background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 1px 6px rgba(0,0,0,0.06); }
+  .qa-list li { margin-bottom: 8px; }
+  .qa-list a { color: #4299e1; text-decoration: none; }
+  .qa-list a:hover { text-decoration: underline; }
+  .trust-box { background: #fff; border-radius: 12px; padding: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .footer { background: #1a202c; color: #a0aec0; text-align: center; padding: 30px; font-size: 0.85em; }
+  .footer a { color: #63b3ed; text-decoration: none; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 0.75em; font-weight: 600; margin-right: 6px; }
+  .badge-high { background: #c6f6d5; color: #22543d; }
+  .badge-medium { background: #fefcbf; color: #744210; }
+  .badge-low { background: #fed7d7; color: #742a2a; }
+  @media (max-width: 768px) { .hero { padding: 40px 20px; } .hero h1 { font-size: 1.6em; } .visual-grid { grid-template-columns: 1fr; } }
+
+  /* Lightbox */
+  .lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; cursor: pointer; justify-content: center; align-items: center; }
+  .lightbox.active { display: flex; }
+  .lightbox img { max-width: 95%; max-height: 95%; object-fit: contain; }
+</style>
+</head>
+<body>
+<div class="hero">
+  <h1>EU CRA対策（SEMI規格準拠企業向け戦略立案）</h1>
+  <p>SEMI規格を遵守する日本の半導体装置ソフトウェア企業が、EUサイバーレジリエンス法（CRA）に低コストかつ確実に準拠するための段階的ロードマップと技術戦略を策定する。</p>
+  <div class="meta">
+    <span>更新日時: 2026-03-17 01:51</span>
+    <span>ステップ数: 6</span>
+    <span>総調査時間: 58m49s</span>
+    <span>使用モデル: claude-opus-4.6, claude-sonnet-4.6, gemini-3-pro-preview, gpt-5.3-codex</span>
+  </div>
+</div>
+<div class="container">
+  <div class="section">
+    <div class="about-box">
+      <h3>本資料について</h3>
+      <p>本資料は <strong>AI Research Agent</strong> により自動生成されたリサーチ結果です。
+      複数のAIモデルがリレー方式で調査・分析・検証を行い、エビデンスベースの構造化された調査資料を生成しています。</p>
+      <ul>
+        <li><strong>AIの学習データに基づく調査です</strong> — 情報の正確性は保証されません</li>
+        <li><strong>確信度（High/Medium/Low）を参照してください</strong> — Low の情報は特に裏取りが必要です</li>
+        <li><strong>品質検証レビューを確認してください</strong> — 調査結果の弱点・未検証事項が明示されています</li>
+        <li><strong>最終判断は読者が行ってください</strong> — 本資料は判断材料を提供するものです</li>
+      </ul>
+    </div>
+    <div class="about-box" style="border-left-color: #48bb78;">
+      <h3>調査の前提条件</h3>
+      <p>EU CRA（サイバーレジリエンス法）への対応戦略を立案する。SEMI規格を既に遵守している日本の半導体装置向けソフトウェア開発企業がEU輸出を継続しながら、最低限のコストでCRA準拠を達成するための段階的ロードマップを策定する</p>
+    </div>
+    <div style="text-align: center; margin-top: 10px;">
+      <a href="./viewer.html?file=FINAL_REPORT.md" style="display: inline-block; background: linear-gradient(135deg, #2b6cb0, #4299e1); color: #fff; padding: 16px 40px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1.15em; box-shadow: 0 4px 12px rgba(66,153,225,0.4);">最終レポートを読む →</a>
+      <p style="margin-top: 8px; font-size: 0.85em; color: #718096;">全調査結果を統合した最終レポートです</p>
+    </div>
+    <div class="visual-card" style="margin-top: 30px; margin-bottom: 10px;">
+      <img src="./visuals/infographic.png" alt="インフォグラフィック" onclick="openLightbox(this)" style="cursor:pointer;">
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title">プレゼンテーション</div>
+    <div class="section-subtitle">調査結果のスライドです。矢印キーでページ送りできます</div>
+    <iframe class="slides-frame" src="./slides.html"></iframe>
+    <p style="margin-top: 12px; text-align: center;">
+      <a href="./slides.html" target="_blank" style="color: #4299e1; text-decoration: none; font-weight: 600;">スライドを別ウィンドウで開く ↗</a>
+    </p>
+  </div>
+  <div class="section" style="text-align: center;">
+    <div class="section-title">可視化ギャラリー</div>
+    <div class="section-subtitle">調査結果を様々な角度から可視化した図を確認できます</div>
+    <a href="./gallery.html" style="display: inline-block; background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; padding: 14px 36px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1.05em; box-shadow: 0 2px 8px rgba(102,126,234,0.4);">ギャラリーを開く →</a>
+  </div>
+  <div class="section">
+    <div class="section-title">調査ステップ</div>
+    <div class="section-subtitle">各AIモデルが順番に調査・分析・検証を行いました</div>
+
+            <div class="step-card">
+              <div class="step-number">Step 1</div>
+              <div class="step-info">
+                <div class="step-role">情報収集</div>
+                <div class="step-model">gemini-3-pro-preview <span class="step-tag">⏱ 2m50s</span><span class="step-tag">8 KB</span></div>
+                <p class="step-summary">EU CRA Regulatory Scope & SEMI Gap Analysis (EU CRA規制スコープとSEMI規格ギャップ分析)  1. CRA Regulatory Scope & Product Classification (規制適用範囲と製品重要度分類) ...</p>
+                <a href="./viewer.html?file=steps/01-information-gathering-gemini-3-pro-preview.md" class="step-link">詳細を読む →</a>
+              </div>
+            </div>
+            <div class="step-card">
+              <div class="step-number">Step 2</div>
+              <div class="step-info">
+                <div class="step-role">深層分析</div>
+                <div class="step-model">claude-sonnet-4.6 <span class="step-tag">⏱ 11m18s</span><span class="step-tag">29 KB</span></div>
+                <p class="step-summary">CRA要件 × SEMI E187/E188 詳細マッピング分析  Overview（分析概要） ...</p>
+                <a href="./viewer.html?file=steps/02-deep-analysis-claude-sonnet-4.6.md" class="step-link">詳細を読む →</a>
+              </div>
+            </div>
+            <div class="step-card">
+              <div class="step-number">Step 3</div>
+              <div class="step-info">
+                <div class="step-role">技術戦略</div>
+                <div class="step-model">gpt-5.3-codex <span class="step-tag">⏱ 12m38s</span><span class="step-tag">18 KB</span></div>
+                <p class="step-summary">少し一次情報を再確認して、CRA条文・SBOM仕様・運用義務の根拠を固めた上で、実装可能な技術戦略に落とし込みます。まず既存の調査ファイルと公式情報を同時に確認します。  公式条文の番号・適用時期・SBOM実装要件を一次情報ベースで確定させます。並行して、OSSツール候補の根拠も集めます。 ...</p>
+                <a href="./viewer.html?file=steps/03-technical-strategy-gpt-5.3-codex.md" class="step-link">詳細を読む →</a>
+              </div>
+            </div>
+            <div class="step-card">
+              <div class="step-number">Step 4</div>
+              <div class="step-info">
+                <div class="step-role">深層分析</div>
+                <div class="step-model">claude-sonnet-4.6 <span class="step-tag">⏱ 12m7s</span><span class="step-tag">38 KB</span></div>
+                <p class="step-summary">EU CRA 段階的導入ロードマップと関連規格重複活用戦略  Overview（分析概要） ...</p>
+                <a href="./viewer.html?file=steps/04-deep-analysis-claude-sonnet-4.6.md" class="step-link">詳細を読む →</a>
+              </div>
+            </div>
+            <div class="step-card">
+              <div class="step-number">Step 5</div>
+              <div class="step-info">
+                <div class="step-role">品質検証レビュー</div>
+                <div class="step-model">claude-sonnet-4.6 <span class="step-tag">⏱ 4m7s</span><span class="step-tag">31 KB</span></div>
+                <p class="step-summary">Critic Review（批判的レビュー）  Validation Summary（検証サマリー） ...</p>
+                <a href="./viewer.html?file=steps/05-critic-review-claude-sonnet-4.6.md" class="step-link">詳細を読む →</a>
+              </div>
+            </div>
+            <div class="step-card">
+              <div class="step-number">Step 6</div>
+              <div class="step-info">
+                <div class="step-role">統合レビュー</div>
+                <div class="step-model">claude-opus-4.6 <span class="step-tag">⏱ 13m56s</span><span class="step-tag">59 KB</span></div>
+                <p class="step-summary">Now let me check for any existing EU CRA research outputs and gather the latest CRA information to produce a comprehensive integration review.  Now I ...</p>
+                <a href="./viewer.html?file=steps/06-integration-review-claude-opus-4.6.md" class="step-link">詳細を読む →</a>
+              </div>
+            </div>
+  </div>
+  <div class="section" style="text-align: center;">
+    <div class="section-title" style="font-size: 1.2em; color: #718096;">品質レポート</div>
+    <div class="section-subtitle">調査プロセスの信頼性・確信度分布・情報源の品質を確認できます</div>
+    <a href="./quality.html" style="display: inline-block; background: #718096; color: #fff; padding: 10px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9em;">品質レポートを確認 →</a>
+  </div>
+</div>
+
+<div class="footer">
+  Generated by <a href="https://github.com/ledboots624/ai-research-agent">AI Research Agent</a> v2.5.0<br>
+  AI生成のため、重要な意思決定には人間による検証を推奨します
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+function openLightbox(el) {
+  var lb = document.getElementById('lightbox');
+  document.getElementById('lightbox-img').src = el.src;
+  lb.classList.add('active');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
+</script>
+</body>
+</html>

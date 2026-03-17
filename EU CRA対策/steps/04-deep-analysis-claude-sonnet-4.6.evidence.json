@@ -1,0 +1,636 @@
+{
+  "step": 4,
+  "role": "deep-analysis",
+  "model": "claude-sonnet-4.6",
+  "extracted_at": "2026-03-17T01:23:52Z",
+  "claims": [
+    {
+      "claim": "CRA（Regulation (EU) 2024/2847）は2024年12月11日に発効し、段階的施行スケジュールが法令により確定している。ロードマップ設計において最も重要な制約は「インシデント報告義務の2026年9月先行施行」であり、製品設計要件の完全適用（2027年12月）より1年以上早い。",
+      "evidence": "2024年12月11日: CRA発効（Official Journal掲載）。2026年9月11日: Article 14（インシデント・脆弱性報告義務）先行施行。2026年9月11日: Article 17および関連委任法令の一部施行。2027年12月11日: CRA完全適用（Annex I製品設計要件、DoC、CEマーキング義務）。移行期間: 2024年12月〜2027年12月の3年間が実質的な準備期間。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/2847 Article 71（発効・施行規定）",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Article 71",
+          "mapping": "direct"
+        },
+        {
+          "standard": "CRA",
+          "section": "Article 14",
+          "mapping": "direct"
+        }
+      ]
+    },
+    {
+      "claim": "本ロードマップは「法的リスクの時系列的除去」を最優先原則とし、①先行施行される報告義務への対応を最初の完了目標とし、②既存SEMI資産の再利用を最大化することで新規投資を最小化し、③フェーズ間の依存関係を明示することで、工数の重複と手戻りを防ぐ構造とする。",
+      "evidence": "前ステップ分析では、ENISAインシデント報告（P1優先度）・EU DoC（P1）・SBOM（P1）の3項目が「法的ペナルティ直結ギャップ」と評価されており、この優先度順がフェーズ設計の根拠となる。",
+      "source": {
+        "source_type": "unknown",
+        "source_title": "前ステップ deep-analysis（本調査セッション内分析）",
+        "source_locator": "unknown",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier4",
+        "primary_source": false,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": null,
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Article 14",
+          "mapping": "partial"
+        },
+        {
+          "standard": "CRA",
+          "section": "Annex I Part II",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "CRA適用開始前に製品がDefault Category・Class I・Class IIのいずれに該当するかを確定することが最重要の初期アクションであり、この判定が第三者認証要否（数百万円の費用差）と適合宣言手法（Module A/B/C）を決定する。",
+      "evidence": "Default Category（自己宣言Module A適用可）: Annex IIIに列挙されないすべての製品。多くの半導体装置制御ソフトウェアはここに該当すると推定（推測）。Class I（第三者関与推奨）: Annex III, Part I列挙品目。Class II（第三者認証必須）: Annex III, Part II列挙品目。判定作業: Annex III照合は3〜5人日、外部法律顧問による確認に別途10〜20人日を推奨。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/2847 Annex III",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Annex III",
+          "mapping": "direct"
+        },
+        {
+          "standard": "CRA",
+          "section": "Annex VIII（Module A）",
+          "mapping": "direct"
+        }
+      ]
+    },
+    {
+      "claim": "CRA対応を横断的に推進する「CRA対応オーナー（PSIRT兼任可）」を任命し、責任主体・意思決定経路・外部連携（EU法務顧問・認定機関）を明確化することが、フェーズ全体の実行速度を決定する。",
+      "evidence": "PSIRT（Product Security Incident Response Team）は後のPhase 2でインシデント報告義務対応に必須であり、Phase 0から並行して立ち上げることで工数の重複を防げる。FIRST PSIRT Services Framework v1.1が実装指針として参照可能。体制設計・役割定義・対外窓口設定に5〜10人日。",
+      "source": {
+        "source_type": "industry_report",
+        "source_title": "FIRST PSIRT Services Framework v1.1",
+        "source_locator": "https://www.first.org/standards/frameworks/psirts/FIRST_PSIRT_Services_Framework_v1.1.pdf",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier2",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "SHOULD",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Article 14",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "Article 14に基づく24時間早期警告・72時間通知・最終報告の3段階プロセスを、ENISAのSingle Reporting Platform（SRP）経由で実行できる運用手順書・テンプレートセットを整備することが本フェーズの核心タスクである。",
+      "evidence": "報告対象トリガー: 「悪用が確認された脆弱性（actively exploited vulnerability）」かつ「重大なインシデント（severe incident）」の両条件を満たすケース。報告先経路: ENISAのSingle Reporting Platform（SRP）を通じた国別CSIRTへの報告。24時間早期警告内容: インシデントの性質・影響製品・暫定情報。72時間通知内容: インシデント影響範囲・暫定緩和策・製品バージョン特定。最終報告（72h通知後1ヶ月）: 根本原因・修正策・再発防止策。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/2847 Article 14",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Article 14",
+          "mapping": "direct"
+        }
+      ]
+    },
+    {
+      "claim": "Article 13(6)が要求する脆弱性報告受付窓口の公開は、security.txt（RFC 9116準拠）+ 専用メールアドレス + 公開VDPページの3点セットで最短実装できる。これは工数最小（5〜10人日）で法令要件を充足できる高コスト効率の施策である。",
+      "evidence": "RFC 9116 security.txt: ウェブサイトの /.well-known/security.txt に連絡先・ポリシーURL・PGP公開鍵を記載する業界標準。CISAも推奨する実装方法。VDPページ最小内容: 報告受付メール、応答SLA（例：5営業日以内に受領確認）、修正・開示のタイムライン方針。言語: 英語での窓口整備必須（EU市場向け）。日本語併記は任意。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/2847 Article 13(6)",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Article 13(6)",
+          "mapping": "direct"
+        },
+        {
+          "standard": "RFC 9116",
+          "section": "全体",
+          "mapping": "direct"
+        }
+      ]
+    },
+    {
+      "claim": "CRAが要求する「機械可読SBOM（commonly used and machine-readable format）」の最小コスト実装は、Syftによる自動生成をCIパイプラインに組み込み、CycloneDX JSON形式を標準出力とすることで達成できる。SEMI E188の既存Software Inventoryは初期投入データとして活用し、段階的に自動化する。",
+      "evidence": "SBOM最低フィールドセット（CRA-Min）: doc_format, spec_version, document_id, timestamp, product_name, product_version, component_name, component_version, supplier, hash/checksum, license, dependency_ref, depends_on（前ステップ技術戦略分析より）。Syft: CycloneDX/SPDX両フォーマット出力対応、CI/CDパイプライン組込み実績が豊富なOSSツール。E188 Software Inventory活用: 既存Excel/CSV形式のインベントリをCycloneDX変換する初期移行作業は5〜10人日で実施可能（前ステップ推計）。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/2847 Annex I Part II",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Annex I Part II",
+          "mapping": "direct"
+        },
+        {
+          "standard": "SEMI E188",
+          "section": "§4.1-4.5",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "SBOMを生成するだけでなく、CRA Annex I Part IIが要求する「継続的な脆弱性管理」を実現するには、SBOM+脆弱性DBの継続照合（Grype/OSV-Scanner）とDependency-Trackによる長期管理基盤が必要である。",
+      "evidence": "Dependency-Trackは生成されたSBOMを継続的に取り込み、NVD・OSVデータベースと照合して新規CVEの発生を自動検出する。これにより「出荷後に発覚した脆弱性への対応」という5年間の継続義務を、人的コストを最小化しながら実現できる。",
+      "source": {
+        "source_type": "industry_report",
+        "source_title": "Dependency-Track README（OWASP）",
+        "source_locator": "https://github.com/DependencyTrack/dependency-track/blob/master/README.md",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier2",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Annex I Part II",
+          "mapping": "direct"
+        }
+      ]
+    },
+    {
+      "claim": "CRA Annex V（技術文書）の要求事項に対し、既存のSEMI E187/E188準拠文書を再利用・変換することで、技術文書整備の約60〜70%を既存資産でカバーできる。この変換作業に集中投資することが、製品設計対応における最大のコスト削減効果をもたらす。",
+      "evidence": "前ステップ分析の「高再利用可能資産」テーブルが根拠：E187 §3.3/§3.4/§3.5/§3.1、E188 §4.1-4.5が直接転用可能。追加作業は英語化・EU法令フォーマット変換・製品識別情報の追記が主体。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/2847 Annex V（技術文書要件）",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Annex V",
+          "mapping": "direct"
+        },
+        {
+          "standard": "SEMI E187",
+          "section": "§3.1, §3.3, §3.4, §3.5",
+          "mapping": "partial"
+        },
+        {
+          "standard": "SEMI E188",
+          "section": "§4.1-4.5",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "CRA要件のうちSEMI資産で充足できない「ギャップ項目」（セキュリティイベントログの拡充・データ最小化設計・インシデント封じ込め機能・暗号化通信の完全化）については、製品ロードマップへの組み込みによる段階的修正が現実的であり、一括対応より優先順位付きの分割実装が中小企業には適している。",
+      "evidence": "ギャップ分析（前ステップ）では、製品設計ギャップのうちData Minimization（個人データ不処理の場合は影響限定）とRemovabilityは半導体装置制御ソフトウェアにおいて実質影響が小さい可能性があり、製品特性に応じたスコープ調整が可能。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/2847 Annex I Part I §8, §9",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Annex I Part I §8",
+          "mapping": "direct"
+        },
+        {
+          "standard": "CRA",
+          "section": "Annex I Part I §9",
+          "mapping": "direct"
+        },
+        {
+          "standard": "SEMI E187",
+          "section": "全体",
+          "mapping": "gap"
+        }
+      ]
+    },
+    {
+      "claim": "Default Category製品（Module A：自己宣言）の場合、DoC作成は第三者認証なしに実施可能であり、Annex IV規定フォームへの記載と法務確認を経て発行できる。DoC発行コストの大部分は「技術文書の完全性確認」であり、Phase 3が完了していれば追加工数は限定的である。",
+      "evidence": "Annex IV必須記載事項: 製造者名・住所・連絡先、製品の説明（型式・バッチ番号等）、適用CRA規定のリスト、適用調和規格のリスト（EN 18031等）、EU公用語での発行、権限者署名・日付。Module A（自己宣言）: Default Categoryに適用、第三者の適合性評価機関関与不要。Class I製品（追加注意）: 調和規格（EN 18031）を適用するか、第三者機関によるレビューが選択肢となる。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/2847 Article 20, Annex IV, Annex VIII（適合評価手順）",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Article 20",
+          "mapping": "direct"
+        },
+        {
+          "standard": "CRA",
+          "section": "Annex IV",
+          "mapping": "direct"
+        },
+        {
+          "standard": "CRA",
+          "section": "Annex VIII",
+          "mapping": "direct"
+        }
+      ]
+    },
+    {
+      "claim": "IEC 62443（産業用オートメーション・制御システムのセキュリティ）は、CRA Annex I要件と最も重複度が高い関連規格であり、特にIEC 62443-4-1（製品セキュリティ開発ライフサイクル）とIEC 62443-4-2（コンポーネントセキュリティ要件）は、CRAの製品設計・開発プロセス要件に直接対応するため、既存IEC 62443準拠資産がある場合は大幅なコスト削減が可能である。",
+      "evidence": "IEC 62443-4-1 SR-1〜SR-8（セキュア開発プロセス）がCRA Annex I Part I（設計要件全般）に対応しSSDLエビデンスをAnnex V技術文書に転用で30〜50%削減。IEC 62443-4-2 SAR 3.1〜3.14（アクセス制御・ログ等）がCRA §7,§8（アクセス制御・ログ）に対応で20〜40%削減。IEC 62443-2-1（セキュリティ管理システム）がCRA脆弱性管理プロセス（Annex I Part II）に対応で10〜20%削減。IEC 62443-3-3（システムセキュリティ要件）がCRA Annex I Part I（effect mitigation等）に対応で20〜30%削減。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "IEC 62443 Series（産業用セキュリティ標準）",
+        "source_locator": "https://webstore.iec.ch/en/publication/33615",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": "SHOULD",
+      "standard_references": [
+        {
+          "standard": "IEC 62443-4-1",
+          "section": "SR-1〜SR-8",
+          "mapping": "direct"
+        },
+        {
+          "standard": "IEC 62443-4-2",
+          "section": "SAR 3.1〜3.14",
+          "mapping": "direct"
+        },
+        {
+          "standard": "IEC 62443-2-1",
+          "section": "全体",
+          "mapping": "partial"
+        },
+        {
+          "standard": "IEC 62443-3-3",
+          "section": "全体",
+          "mapping": "partial"
+        },
+        {
+          "standard": "CRA",
+          "section": "Annex I Part I",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "IEC 62443は現時点ではCRAの「調和規格（Harmonised Standards）」として正式指定されていないが、CRA Recital 35は「既存のセキュリティ規格・標準が技術文書の根拠として活用可能」と認めており、準拠証跡の補強材料として使用できる。調和規格指定後は「準拠推定（Presumption of Conformity）」の効果が生じ、適合評価コストが大幅に低減される可能性がある。",
+      "evidence": "ENISAの調和規格候補リストにIEC 62443-4-1が検討対象として含まれている旨の業界報告あり（推測・要確認）。EN 18031（ヨーロッパ規格）はすでにCRA適合評価の参照規格として位置づけられている。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/2847 Recital 35, Article 19（調和規格）",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": "MAY",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Recital 35",
+          "mapping": "direct"
+        },
+        {
+          "standard": "CRA",
+          "section": "Article 19",
+          "mapping": "direct"
+        },
+        {
+          "standard": "IEC 62443",
+          "section": "全体",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "ISO/IEC 27001（情報セキュリティマネジメントシステム）は、CRAの脆弱性管理プロセス・インシデント対応・サプライチェーン管理要件と組織的側面で重複しており、既存ISO 27001認証保有企業は組織プロセスの構築工数を30〜50%削減できると推定される。",
+      "evidence": "A.12.6（技術的脆弱性の管理）がCRA Annex I Part II（脆弱性管理）にほぼ直接対応。A.16（情報セキュリティインシデント管理）がCRA Article 14（インシデント報告）に対応し、インシデント対応手順書を拡張してSRP報告を追加可能。A.15（サプライヤー関係）がCRA Annex I Part I §11（サプライチェーン透明性）に対応。A.8.29（開発フェーズのセキュリティテスト）がCRA Annex I Part II §3（定期セキュリティテスト）に対応。A.5.24（情報セキュリティインシデント対応計画）がCRA Article 14（対応プロセス）に対応。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "ISO/IEC 27001:2022（情報セキュリティマネジメント要件）",
+        "source_locator": "https://www.iso.org/standard/27001",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": "SHOULD",
+      "standard_references": [
+        {
+          "standard": "ISO/IEC 27001",
+          "section": "A.12.6",
+          "mapping": "direct"
+        },
+        {
+          "standard": "ISO/IEC 27001",
+          "section": "A.16",
+          "mapping": "direct"
+        },
+        {
+          "standard": "ISO/IEC 27001",
+          "section": "A.15",
+          "mapping": "partial"
+        },
+        {
+          "standard": "ISO/IEC 27001",
+          "section": "A.8.29",
+          "mapping": "partial"
+        },
+        {
+          "standard": "ISO/IEC 27001",
+          "section": "A.5.24",
+          "mapping": "partial"
+        },
+        {
+          "standard": "CRA",
+          "section": "Annex I Part II",
+          "mapping": "partial"
+        },
+        {
+          "standard": "CRA",
+          "section": "Article 14",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "ISO 27001を未取得の場合でも、ISO 27001の統制フレームワーク（Annex A統制リスト）をCRA対応のチェックリスト設計の参照モデルとして活用することで、ゼロベース設計より効率的な組織プロセス構築が可能である。認証取得自体はCRA法令では要求されない。",
+      "evidence": "not_stated",
+      "source": {
+        "source_type": "unknown",
+        "source_title": "著者の規格活用分析に基づく推論",
+        "source_locator": "unknown",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier4",
+        "primary_source": false,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": "MAY",
+      "standard_references": [
+        {
+          "standard": "ISO/IEC 27001",
+          "section": "Annex A",
+          "mapping": "partial"
+        },
+        {
+          "standard": "CRA",
+          "section": "全体",
+          "mapping": "gap"
+        }
+      ]
+    },
+    {
+      "claim": "NIST SP 800-218（Secure Software Development Framework：SSDF）は、CRAが求めるセキュア開発ライフサイクルの実装指針として最も直接的に参照可能な無償フレームワークであり、中小企業がIEC 62443等の高コスト有償規格に依存せずにCRA対応を進める際の代替基盤として活用できる。",
+      "evidence": "SSDFの4プラクティスグループ（PO：組織準備、PS：ソフトウェア保護、PW：セキュア開発、RV：脆弱性対応）はCRA Annex I要件に広く対応。無償で公開されており、中小企業のコスト制約に対して最もアクセシブルな標準。CRA技術文書においてSSDFへの準拠を記載することで、開発プロセスの証拠補強が可能（SHOULDレベルの活用）。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "NIST SP 800-218 Secure Software Development Framework（SSDF）v1.1",
+        "source_locator": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218.pdf",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "SHOULD",
+      "standard_references": [
+        {
+          "standard": "NIST SP 800-218",
+          "section": "PO, PS, PW, RV",
+          "mapping": "partial"
+        },
+        {
+          "standard": "CRA",
+          "section": "Annex I",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "SEMI E187/E188遵守企業のCRA対応コストの70〜80%は製品の技術的再設計ではなく、プロセス構築と文書整備に集中するべきであり、これが中小企業にとって最もROIが高い投資方針である。",
+      "evidence": "前ステップ分析が示す通り、製品設計領域ではSEMI準拠資産で60〜70%を充足可能だが、報告義務・VDP・DoCはゼロから構築が必要。中小企業は開発リソースより管理・文書リソースが希少なため、外部専門家との分業が有効。",
+      "source": {
+        "source_type": "unknown",
+        "source_title": "前ステップ分析・著者推論",
+        "source_locator": "unknown",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier4",
+        "primary_source": false,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": "SHOULD",
+      "standard_references": [
+        {
+          "standard": "SEMI E187",
+          "section": "全体",
+          "mapping": "partial"
+        },
+        {
+          "standard": "SEMI E188",
+          "section": "全体",
+          "mapping": "partial"
+        },
+        {
+          "standard": "CRA",
+          "section": "Annex I",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "SBOM生成・管理・脆弱性照合のツールスタックはすべてOSSで構成可能であり、ライセンスコストゼロで必要な技術基盤を構築できる。商用ツールへの投資はOSS基盤が安定してから段階的に検討するべきである。",
+      "evidence": "Syft（SBOM生成）・cyclonedx-cli（変換・検証）・Grype/OSV-Scanner（脆弱性照合）・Dependency-Track（継続管理）のすべてが無償OSSで利用可能。",
+      "source": {
+        "source_type": "industry_report",
+        "source_title": "各OSSツールGitHub README参照（前ステップ技術戦略分析）",
+        "source_locator": "https://github.com/anchore/syft",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier2",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "SHOULD",
+      "standard_references": []
+    },
+    {
+      "claim": "2026年9月（報告義務先行施行）を唯一の硬直的期限として扱い、Phase 1（報告義務対応）とPhase 2の一部（SBOM初期生成）を2026年9月までの必達目標として集中投資する。残りのPhase 3・4は2027年12月に向けて段階的に実施する余裕を確保する。",
+      "evidence": "not_stated（法令による施行期限を根拠とする推奨戦略）",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/2847 Article 71",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "high",
+      "requirement_level": "MUST",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Article 71",
+          "mapping": "direct"
+        },
+        {
+          "standard": "CRA",
+          "section": "Article 14",
+          "mapping": "direct"
+        }
+      ]
+    },
+    {
+      "claim": "技術文書（Annex V）の初版は最小限の必須記載事項のみで作成し、四半期ごとに更新・充実化する「生きた文書」として管理することで、初期構築コストと継続維持コストの両方を最適化できる。",
+      "evidence": "not_stated",
+      "source": {
+        "source_type": "unknown",
+        "source_title": "著者の文書管理最適化推論",
+        "source_locator": "unknown",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier4",
+        "primary_source": false,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": "SHOULD",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Annex V",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "中小企業においては、EU法務顧問（DoC発行・製品分類確認）と認定コンサルタント（技術文書レビュー）への限定的な外部委託が、全内製よりも総コストを削減できる可能性が高い。自社には「プロセスオーナー」を置き、文書作成の実作業を内製化することで外部費用を最小化する構造が最適である。",
+      "evidence": "EU CRAの製品分類誤認（Default CategoryをClass Iと誤判定、またはその逆）は数百万円規模のコスト差を生む。初期の法務確認投資（50〜200万円）は保険コストとして見なすべきである。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "Regulation (EU) 2024/2847 Annex III（製品分類）",
+        "source_locator": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": "SHOULD",
+      "standard_references": [
+        {
+          "standard": "CRA",
+          "section": "Annex III",
+          "mapping": "partial"
+        }
+      ]
+    },
+    {
+      "claim": "本ロードマップの「18ヶ月・213〜390人日」という推計は、SEMI準拠済み・中堅規模（50〜200名）・既存セキュリティ担当者保有を前提とした参考値であり、実際の難易度は製品分類・既存認証保有状況・製品ライン数・専任担当者有無・委任法令追加規制等の要因により大幅に変動しうる。",
+      "evidence": "製品がClass Iに該当する場合（+50〜100人日）、SEMI E187/E188準拠が書面のみの場合（+30〜60人日）、ISO 27001・IEC 62443の既存認証あり（▲30〜70人日）、複数製品ラインへの横展開（+30〜100人日/製品）、専任CRA担当者の不在（+20〜40人日）、委任法令の追加規制（+未定）。",
+      "source": {
+        "source_type": "unknown",
+        "source_title": "著者の工数変動分析（参考値）",
+        "source_locator": "unknown",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier4",
+        "primary_source": false,
+        "community_score": null
+      },
+      "confidence": "low",
+      "requirement_level": null,
+      "standard_references": []
+    },
+    {
+      "claim": "日本の半導体装置ソフトウェア製造者がCRA対応を実施する際、技術的課題よりも「組織・言語・欧州規制体制への不慣れ」が最大の実施障壁となりうる（推測）。",
+      "evidence": "（1）言語障壁: DoC・技術文書のEU公用語での作成義務。DG CONNECTはCRA実施に際して英語を含む複数言語での文書提供を要求する。（2）EU CSIRT体制の不熟知: 各EU加盟国のCSIRT連絡先・SRP報告経路の把握には事前準備が必要。ENISA公開の「EU CSIRT Network」一覧の事前確認が必須。（3）調和規格の流動性: 2026〜2027年の委任法令・調和規格指定の変動により、準拠対象仕様が変化しうる。四半期ごとの法令ウォッチが不可欠。（4）先行事例の乏しさ: CRAは2027年12月完全適用前の過渡期にあり、日本企業による完全対応事例は現時点でほぼ存在しない（未確定・要情報収集）。",
+      "source": {
+        "source_type": "official_document",
+        "source_title": "ENISA CSIRT Network",
+        "source_locator": "https://www.enisa.europa.eu/topics/csirts-in-europe/csirt-network",
+        "access_date": "2026-03-17",
+        "reliability_tier": "tier1",
+        "primary_source": true,
+        "community_score": null
+      },
+      "confidence": "medium",
+      "requirement_level": null,
+      "standard_references": []
+    }
+  ]
+}

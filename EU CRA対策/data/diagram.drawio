@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="draw.io">
+  <diagram name="EU CRA Roadmap" id="diagram-1">
+    <mxGraphModel background="#ffffff" dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Title Bar -->
+        <mxCell id="title" value="EU CRA対策ロードマップ：SEMI規格準拠企業向け戦略 (2024-2027)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2d3748;strokeColor=none;fontColor=#ffffff;fontSize=22;fontStyle=1;align=center;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Phase 1 Background: 準備・計画 -->
+        <mxCell id="bg1" value="Phase 1: 準備・ギャップ分析&#xa;(〜Month 3)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f7fafc;strokeColor=#cbd5e0;fontColor=#4a5568;fontSize=14;fontStyle=1;verticalAlign=top;align=left;spacingLeft=10;arcSize=4;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="300" height="480" as="geometry" />
+        </mxCell>
+
+        <!-- Phase 2 Background: 体制構築・実装 -->
+        <mxCell id="bg2" value="Phase 2: 技術実装・体制構築&#xa;(Month 4〜18)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ebf8ff;strokeColor=#bee3f8;fontColor=#2b6cb0;fontSize=14;fontStyle=1;verticalAlign=top;align=left;spacingLeft=10;arcSize=4;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="120" width="460" height="480" as="geometry" />
+        </mxCell>
+
+        <!-- Phase 3 Background: 適合・維持 -->
+        <mxCell id="bg3" value="Phase 3: 適合宣言・維持運用&#xa;(Month 19〜)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fff4;strokeColor=#c6f6d5;fontColor=#2f855a;fontSize=14;fontStyle=1;verticalAlign=top;align=left;spacingLeft=10;arcSize=4;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="120" width="320" height="480" as="geometry" />
+        </mxCell>
+
+        <!-- Nodes -->
+        
+        <!-- Start Node -->
+        <mxCell id="start" value="SEMI E187/E188&#xa;準拠済み (現状)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#edf2f7;strokeColor=#718096;fontColor=#2d3748;fontSize=12;shadow=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="80" y="250" width="160" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Step 1: Scope & Classification -->
+        <mxCell id="step1" value="1. 規制スコープ特定&#xa;製品分類 (Default vs Class I/II)&#xa;責任主体確認 (製造者/輸入者)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ebf4ff;strokeColor=#3182ce;fontColor=#2d3748;fontSize=12;shadow=1;arcSize=8;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="360" width="200" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Step 2: Gap Analysis -->
+        <mxCell id="step2" value="2. SEMIギャップ分析&#xa;既存資産(E187)の再利用&#xa;IEC 62443重複活用検討" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ebf4ff;strokeColor=#3182ce;fontColor=#2d3748;fontSize=12;shadow=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="100" y="480" width="200" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- CRITICAL Alert: 2026 Reporting -->
+        <mxCell id="alert_report" value="【最優先】2026年9月&#xa;脆弱性報告義務 (Article 14)&#xa;ENISA 24h早期警戒 / 72h詳細報告" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fed7d7;strokeColor=#e53e3e;strokeWidth=3;fontColor=#c53030;fontSize=12;shadow=1;arcSize=8;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="180" width="220" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Step 3: Tech Implementation -->
+        <mxCell id="step3" value="3. 技術的セキュリティ要件&#xa;セキュアバイデザイン実装&#xa;(Annex I Part I)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fff4;strokeColor=#38a169;fontColor=#2d3748;fontSize=12;shadow=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="400" y="360" width="220" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Step 4: SBOM & Vuln Mgmt -->
+        <mxCell id="step4" value="4. 脆弱性管理プロセス&#xa;SBOM自動生成 (CycloneDX)&#xa;パッチ提供体制 (5年間)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fff4;strokeColor=#38a169;fontColor=#2d3748;fontSize=12;shadow=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="400" y="480" width="220" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Step 5: Conformity Assessment -->
+        <mxCell id="step5" value="5. 適合性評価 (Module A/B+C)&#xa;技術文書 (Technical Doc) 作成&#xa;EU適合宣言 (DoC)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffff0;strokeColor=#d69e2e;fontColor=#2d3748;fontSize=12;shadow=1;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="880" y="360" width="220" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Goal Node -->
+        <mxCell id="goal" value="2027年12月 準拠完了&#xa;CEマーキング貼付&#xa;EU市場アクセス維持" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2d3748;strokeColor=#1a202c;fontColor=#ffffff;fontSize=14;shadow=1;arcSize=8;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="880" y="200" width="220" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Edges -->
+
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#a0aec0;" edge="1" parent="1" source="start" target="step1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#a0aec0;" edge="1" parent="1" source="step1" target="step2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e3" value="高リスク" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#e53e3e;fontColor=#e53e3e;" edge="1" parent="1" source="step2" target="alert_report">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="515" />
+              <mxPoint x="340" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#a0aec0;" edge="1" parent="1" source="step2" target="step4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#a0aec0;" edge="1" parent="1" source="step1" target="step3">
+          <mxGeometry relative="1" as="geometry">
+             <Array as="points">
+              <mxPoint x="320" y="395" />
+              <mxPoint x="320" y="395" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#a0aec0;" edge="1" parent="1" source="step3" target="step5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#a0aec0;" edge="1" parent="1" source="step4" target="step5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e8" value="必須要件" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#38a169;fontColor=#2f855a;" edge="1" parent="1" source="alert_report" target="goal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#a0aec0;" edge="1" parent="1" source="step5" target="goal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Cost Reduction Note -->
+        <mxCell id="note1" value="Tips: IEC 62443認証取得済みの場合、&#xa;整合規格として評価工数を大幅削減可能" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fffff0;strokeColor=#d69e2e;fontColor=#744210;size=15;fontSize=11;align=left;" vertex="1" parent="1">
+          <mxGeometry x="120" y="580" width="180" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e_note" value="" style="edgeStyle=none;rounded=1;html=1;strokeWidth=1;strokeColor=#d69e2e;dashed=1;" edge="1" parent="1" source="note1" target="step2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

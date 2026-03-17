@@ -1,0 +1,166 @@
+<mxGraphModel dx="50" dy="50" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    
+    <!-- Title -->
+    <mxCell id="title" value="EU CRA 対応ロードマップ (SEMI規格準拠企業向け)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=1;spacing=10;" vertex="1" parent="1">
+      <mxGeometry x="60" y="20" width="680" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- Groups (Backgrounds) -->
+    <!-- Preparation Phase (2024-2025) -->
+    <mxCell id="group1" value="【準備フェーズ】 現状分析・体制構築" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;verticalAlign=top;align=left;spacingLeft=10;spacingTop=5;dashed=1;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="60" y="100" width="680" height="340" as="geometry" />
+    </mxCell>
+    
+    <!-- Implementation Phase (2026) -->
+    <mxCell id="group2" value="【実装・先行施行フェーズ】 脆弱性報告・技術対応" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#333333;verticalAlign=top;align=left;spacingLeft=10;spacingTop=5;dashed=1;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="60" y="460" width="680" height="340" as="geometry" />
+    </mxCell>
+
+    <!-- Compliance Phase (2027+) -->
+    <mxCell id="group3" value="【完全適用・運用フェーズ】 適合宣言・市場監視" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#333333;verticalAlign=top;align=left;spacingLeft=10;spacingTop=5;dashed=1;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="60" y="820" width="680" height="360" as="geometry" />
+    </mxCell>
+
+    <!-- Timeline Axis -->
+    <mxCell id="axis" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=3;strokeColor=#666666;" edge="1" parent="1">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="200" y="110" as="sourcePoint" />
+        <mxPoint x="200" y="1160" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+
+    <!-- Events -->
+    
+    <!-- 2024/12 -->
+    <mxCell id="date1" value="2024年12月11日" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="70" y="130" width="110" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="node1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#666666;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="195" y="140" width="10" height="10" as="geometry" />
+    </mxCell>
+    <mxCell id="event1" value="CRA発効 (Regulation (EU) 2024/2847)&#10;・法的なカウントダウン開始&#10;・移行期間（36ヶ月）のスタート" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=1;align=left;spacing=10;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="240" y="125" width="450" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- 2025 H1 -->
+    <mxCell id="date2" value="2025年 上期" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="70" y="210" width="110" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="node2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#666666;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="195" y="220" width="10" height="10" as="geometry" />
+    </mxCell>
+    <mxCell id="event2" value="【学習・スコープ定義】&#10;・EU輸出製品の棚卸しと責任主体の特定&#10;・重要製品(Class I/II)判定 (Annex III)&#10;・OSSコンポーネントの商用利用状況確認" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=1;align=left;spacing=10;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="240" y="200" width="450" height="70" as="geometry" />
+    </mxCell>
+
+    <!-- 2025 H2 -->
+    <mxCell id="date3" value="2025年 下期" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="70" y="300" width="110" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="node3" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#666666;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="195" y="310" width="10" height="10" as="geometry" />
+    </mxCell>
+    <mxCell id="event3" value="【ギャップ分析・体制構築】&#10;・SEMI E187/E188とCRA要件のマッピング&#10;・PSIRT設置、CISO任命、社内教育&#10;・EU代理人 (Authorised Representative) 選定準備" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=1;align=left;spacing=10;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="240" y="290" width="450" height="70" as="geometry" />
+    </mxCell>
+
+    <!-- 2026 H1 -->
+    <mxCell id="date4" value="2026年 上期" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="70" y="490" width="110" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="node4" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#666666;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="195" y="500" width="10" height="10" as="geometry" />
+    </mxCell>
+    <mxCell id="event4" value="【脆弱性管理プロセス実装】&#10;・SBOM自動生成パイプラインの構築&#10;・ENISA/CSIRTへの報告フロー策定&#10;・24時間/72時間報告の模擬訓練" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=1;align=left;spacing=10;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="240" y="480" width="450" height="70" as="geometry" />
+    </mxCell>
+
+    <!-- 2026/09/11 CRITICAL -->
+    <mxCell id="date5" value="2026年9月11日" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#CC0000;" vertex="1" parent="1">
+      <mxGeometry x="50" y="580" width="130" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="node5" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FF0000;strokeColor=#B20000;" vertex="1" parent="1">
+      <mxGeometry x="192" y="590" width="16" height="16" as="geometry" />
+    </mxCell>
+    <mxCell id="event5" value="★【先行施行】報告義務化 (Art. 14)&#10;・悪用された脆弱性・深刻なインシデントの報告義務&#10;・ENISAおよび各国家機関への24時間以内通知&#10;・違反時の罰則リスク発生開始" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=3;shadow=1;align=left;spacing=10;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="240" y="570" width="450" height="80" as="geometry" />
+    </mxCell>
+
+    <!-- 2026 H2 -->
+    <mxCell id="date6" value="2026年 下期" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="70" y="680" width="110" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="node6" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#666666;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="195" y="690" width="10" height="10" as="geometry" />
+    </mxCell>
+    <mxCell id="event6" value="【製品設計・技術文書化】&#10;・Secure by Default / Design 実装完了&#10;・技術文書 (Technical Documentation) の整備&#10;・Annex I 必須要件への適合確認" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=1;align=left;spacing=10;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="240" y="670" width="450" height="70" as="geometry" />
+    </mxCell>
+
+    <!-- 2027 H1 -->
+    <mxCell id="date7" value="2027年 上期" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="70" y="850" width="110" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="node7" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#666666;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="195" y="860" width="10" height="10" as="geometry" />
+    </mxCell>
+    <mxCell id="event7" value="【適合性評価 (Conformity Assessment)】&#10;・Module A (内部統制に基づく自己宣言) の実施&#10;・重要製品の場合は第三者認証機関 (Notified Body) 審査&#10;・EU適合宣言書 (DoC) のドラフト作成" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=1;align=left;spacing=10;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="240" y="840" width="450" height="70" as="geometry" />
+    </mxCell>
+
+    <!-- 2027/12/11 CRITICAL -->
+    <mxCell id="date8" value="2027年12月11日" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#CC0000;" vertex="1" parent="1">
+      <mxGeometry x="50" y="940" width="130" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="node8" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FF0000;strokeColor=#B20000;" vertex="1" parent="1">
+      <mxGeometry x="192" y="950" width="16" height="16" as="geometry" />
+    </mxCell>
+    <mxCell id="event8" value="★【完全適用】CRA全面施行&#10;・CEマーキング貼付必須化、市場アクセス要件化&#10;・適合宣言書 (EU DoC) の発行&#10;・市場監視当局による監査・罰則適用の開始" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=3;shadow=1;align=left;spacing=10;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="240" y="930" width="450" height="80" as="geometry" />
+    </mxCell>
+
+    <!-- 2028+ -->
+    <mxCell id="date9" value="2028年以降" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="70" y="1040" width="110" height="30" as="geometry" />
+    </mxCell>
+    <mxCell id="node9" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#666666;strokeColor=none;" vertex="1" parent="1">
+      <mxGeometry x="195" y="1050" width="10" height="10" as="geometry" />
+    </mxCell>
+    <mxCell id="event9" value="【継続的コンプライアンス】&#10;・製品寿命または5年間のセキュリティサポート義務&#10;・定期的な脆弱性スキャンとアップデート提供&#10;・10年間の技術文書保管" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;shadow=1;align=left;spacing=10;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="240" y="1030" width="450" height="70" as="geometry" />
+    </mxCell>
+    
+    <!-- Connector Lines -->
+    <mxCell id="edge1" style="edgeStyle=none;html=1;endArrow=none;strokeColor=#666666;" edge="1" parent="1" source="node1" target="event1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge2" style="edgeStyle=none;html=1;endArrow=none;strokeColor=#666666;" edge="1" parent="1" source="node2" target="event2">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge3" style="edgeStyle=none;html=1;endArrow=none;strokeColor=#666666;" edge="1" parent="1" source="node3" target="event3">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge4" style="edgeStyle=none;html=1;endArrow=none;strokeColor=#666666;" edge="1" parent="1" source="node4" target="event4">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge5" style="edgeStyle=none;html=1;endArrow=none;strokeColor=#B20000;strokeWidth=2;" edge="1" parent="1" source="node5" target="event5">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge6" style="edgeStyle=none;html=1;endArrow=none;strokeColor=#666666;" edge="1" parent="1" source="node6" target="event6">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge7" style="edgeStyle=none;html=1;endArrow=none;strokeColor=#666666;" edge="1" parent="1" source="node7" target="event7">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge8" style="edgeStyle=none;html=1;endArrow=none;strokeColor=#B20000;strokeWidth=2;" edge="1" parent="1" source="node8" target="event8">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="edge9" style="edgeStyle=none;html=1;endArrow=none;strokeColor=#666666;" edge="1" parent="1" source="node9" target="event9">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>
