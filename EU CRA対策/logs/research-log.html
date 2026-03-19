@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>実行ログ - EU CRA対策（SEMI規格準拠企業向け戦略立案）</title>
+<title>詳細ログ - EU CRA対策（SEMI規格準拠企業向け戦略立案）</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { background: #1a1a2e; }
   body { font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace; background: #1a1a2e; color: #e2e8f0; line-height: 1.6; min-height: 100vh; }
-  .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: #e2e8f0; padding: 24px 40px; display: flex; align-items: center; gap: 20px; }
+  .header { background: linear-gradient(135deg, #1a1a2e 0%, #2c2c54 50%, #474787 100%); color: #dfc88a; padding: 24px 40px; display: flex; align-items: center; gap: 20px; }
   .back-btn { display: inline-flex; align-items: center; gap: 6px; color: #fff; background: rgba(255,255,255,0.12); text-decoration: none; font-size: 0.85em; font-weight: 600; padding: 6px 16px; border-radius: 8px; }
   .back-btn:hover { background: rgba(255,255,255,0.22); }
   .header h1 { font-size: 1.3em; flex: 1; font-family: 'Helvetica Neue', 'Noto Sans JP', sans-serif; }
@@ -38,8 +38,8 @@
 </head>
 <body>
 <div class="header">
-  <a href="../quality.html" class="back-btn">&larr; 品質レポートに戻る</a>
-  <h1>実行ログ</h1>
+  <a href="../records.html" class="back-btn">&larr; 調査記録へ</a>
+  <h1>詳細ログ</h1>
 </div>
 <div class="controls">
   <label>フィルタ:</label>
@@ -188,12 +188,23 @@
 <div class="log-line" data-level="INFO"><span class="ts">[2026-03-17 11:32:01 </span><span class="level-INFO">INFO</span>] フローチャート生成: 2s</div>
 <div class="log-line" data-level="INFO"><span class="ts">[2026-03-17 11:32:01 </span><span class="level-INFO">INFO</span>] フローチャート生成: 2s</div>
 <div class="log-line" data-level="INFO"><span class="ts">[2026-03-17 11:32:01 </span><span class="level-INFO">INFO</span>] ログHTML生成中...</div>
+<div class="log-line" data-level="INFO"><span class="ts">[2026-03-17 11:32:04 </span><span class="level-INFO">INFO</span>] ログHTML生成完了: ./logs/research-log.html</div>
+<div class="log-line" data-level="INFO"><span class="ts">[2026-03-17 11:32:04 </span><span class="level-INFO">INFO</span>] ログHTML生成: 3s</div>
+<div class="log-line" data-level="INFO"><span class="ts">[2026-03-17 11:32:04 </span><span class="level-INFO">INFO</span>] index.html 生成完了: ./index.html</div>
+<div class="log-line" data-level="INFO"><span class="ts">[2026-03-17 11:32:04 </span><span class="level-INFO">INFO</span>] viewer.html 生成完了: ./viewer.html</div>
+<div class="log-line" data-level="INFO"><span class="ts">[2026-03-17 11:32:04 </span><span class="level-INFO">INFO</span>] gallery.html 生成完了: ./gallery.html</div>
+<div class="log-line" data-level="INFO"><span class="ts">[2026-03-17 11:32:04 </span><span class="level-INFO">INFO</span>] quality.html 生成完了: ./quality.html</div>
+<div class="log-line" data-level="INFO"><span class="ts">[2026-03-17 11:32:04 </span><span class="level-INFO">INFO</span>] サイト生成: &lt;1s</div>
+<div class="log-line" data-level="INFO"><span class="ts">[2026-03-17 11:32:04 </span><span class="level-INFO">INFO</span>] 統合ファイナライズ完了</div>
+<div class="log-line" data-level="INFO"><span class="ts">[2026-03-17 11:32:04 </span><span class="level-INFO">INFO</span>] 統合ファイナライズ時間: 16m33s</div>
+<div class="log-line" data-level="INFO"><span class="ts">[2026-03-19 16:19:45 </span><span class="level-INFO">INFO</span>] <span class="separator">===</span> 静的サイト生成モード <span class="separator">===</span></div>
+<div class="log-line" data-level="INFO"><span class="ts">[2026-03-19 16:19:45 </span><span class="level-INFO">INFO</span>] ログHTML生成中...</div>
 </div>
 <div class="stats">
-  <span><span class="dot dot-info"></span> INFO: 135</span>
+  <span><span class="dot dot-info"></span> INFO: 146</span>
   <span><span class="dot dot-warn"></span> WARN: 0</span>
   <span><span class="dot dot-error"></span> ERROR: 0</span>
-  <span>合計: 135 行</span>
+  <span>合計: 146 行</span>
 </div>
 <script>
 function filterLogs() {

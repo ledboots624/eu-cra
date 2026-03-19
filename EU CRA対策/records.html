@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EU CRA対策（SEMI規格準拠企業向け戦略立案）</title>
+<title>調査記録 - EU CRA対策（SEMI規格準拠企業向け戦略立案）</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Noto Serif JP', 'Georgia', serif; background: #faf8f5; color: #3c3c3c; line-height: 1.7;  }
@@ -94,44 +94,29 @@
 </style>
 </head>
 <body>
-<div class="hero">
-  <h1>EU CRA対策（SEMI規格準拠企業向け戦略立案）</h1>
-  <p>SEMI規格を遵守する日本の半導体装置ソフトウェア企業が、EUサイバーレジリエンス法（CRA）に低コストかつ確実に準拠するための段階的ロードマップと技術戦略を策定する。</p>
-  <div class="meta">
-    <span>更新日時: 2026-03-17 02:32</span>
-    <span>ステップ数: 6</span>
-    <span>総調査時間: 75m22s</span>
-    <span>追加操作: 1回</span>
-    <span>使用モデル: claude-opus-4.6, claude-sonnet-4.6, gemini-3-pro-preview, gpt-5.3-codex</span>
-  </div>
+<div class="header">
+  <a href="./index.html" class="back-btn">← トップへ</a>
+  <h1>調査記録</h1>
 </div>
 <div class="container">
   <div class="section">
-    <div class="about-box">
-      <h3>はじめに</h3>
-      <p>本資料は <strong>AI Research Agent</strong> により自動生成されたリサーチ結果です。
-      複数のAIモデルがリレー方式で調査・分析・検証を行い、エビデンスベースの構造化された調査資料を生成しています。</p>
-      <ul>
-        <li><strong>AIの学習データに基づく調査です</strong> — 情報の正確性は保証されません</li>
-        <li><strong>確信度（High/Medium/Low）を参照してください</strong> — Low の情報は特に裏取りが必要です</li>
-        <li><strong>再検証結果を確認してください</strong> — 調査結果の弱点・未検証事項が明示されています</li>
-        <li><strong>最終判断は読者が行ってください</strong> — 本資料は判断材料を提供するものです</li>
-      </ul>
+    <div class="about-box" style="border-left-color: #718096;">
+      <h3>調査記録について</h3>
+      <p>このページは調査の技術的な記録です。調査フローや詳細ログなど、メンテナンス・デバッグ用の情報を確認できます。</p>
     </div>
-    <div class="about-box" style="border-left-color: #5cb88a;">
-      <h3>調査の前提条件</h3>
-      <p>EU CRA（サイバーレジリエンス法）への対応戦略を立案する。SEMI規格を既に遵守している日本の半導体装置向けソフトウェア開発企業がEU輸出を継続しながら、最低限のコストでCRA準拠を達成するための段階的ロードマップを策定する</p>
+    <div style="margin-top: 20px;">
+      <div class="section-title" style="font-size: 1.2em;">調査フロー</div>
+      <div class="about-box" style="border-left-color: #4299e1; padding: 20px;">
+        <p style="font-size: 0.9em; color: #718096; margin-bottom: 16px;">各ステップで使用されたAIモデルと処理の流れを可視化しています</p>
+        <img src="./quality/flow.png" alt="調査フローチャート" style="max-width: 600px; width: 100%; height: auto; cursor: pointer;" onclick="openLightbox(this)">
+      </div>
     </div>
-    <div class="section-title">まとめ</div>
-    <div style="text-align: center; margin-top: 10px; margin-bottom: 40px;">
-      <a href="./viewer.html?file=FINAL_REPORT.md" style="display: inline-block; background: #a67c52; color: #fff; padding: 14px 36px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1em;">調査のまとめを読む</a>
-      <p style="margin-top: 8px; font-size: 0.85em; color: #8a8a8a;">全調査結果をまとめた詳細レポートです</p>
-    </div>
-    <div class="nav-grid">
-      <a href="./presentation.html" class="nav-card" style="background: #a67c52;">調査ハイライト<div class="nav-desc">スライド・図解・チャート</div></a>
-      <a href="./verification.html" class="nav-card" style="background: #c9a961;">再検証結果<div class="nav-desc">確信度・情報源の信頼性</div></a>
-      <a href="./detail.html" class="nav-card" style="background: #c9a961;">調査の詳細<div class="nav-desc">調査プロセス・追加調査</div></a>
-      <a href="./records.html" class="nav-card" style="background: #8a8a8a;">調査記録<div class="nav-desc">フローチャート・詳細ログ</div></a>
+    <div style="margin-top: 24px;">
+      <div class="section-title" style="font-size: 1.2em;">詳細ログ</div>
+      <div class="about-box" style="border-left-color: #718096; padding: 20px;">
+        <p style="font-size: 0.9em; color: #718096; margin-bottom: 12px;">調査中の全イベント（モデル呼び出し・応答・エラー等）の生ログを確認できます</p>
+        <a href="./logs/research-log.html" style="display: inline-block; background: #4a5568; color: #fff; padding: 8px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9em;">詳細ログを見る</a>
+      </div>
     </div>
   </div>
 </div>
